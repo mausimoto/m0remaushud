@@ -6019,6 +6019,367 @@ BaseSettings
 				}
 			}
 		}
+				CBBorderWhite1
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}
+			}
+		}
+		
+		CBBorderWhite2
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "1 0"
+				}
+				
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 1"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 1"
+				}
+			}
+		}			
+		CBBorderWhite3
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "1 0"
+				}				
+				"3"
+				{
+					"color" "255 255 255 255"
+					"offset" "2 0"
+				}
+				
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "1 0"
+				}				
+				"3"
+				{
+					"color" "255 255 255 255"
+					"offset" "2 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 1"
+				}				
+				"3"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 2"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 1"
+				}				
+				"3"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 2"
+				}
+			}
+		}			
+		
+		CBBorderBlack1
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}
+			}
+		}		
+		
+		CBBorderBlack2
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "1 0"
+				}
+				
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 1"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 1"
+				}
+			}
+		}			
+		CBBorderBlack3
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "1 0"
+				}				
+				"3"
+				{
+					"color" "0 0 0 255"
+					"offset" "2 0"
+				}
+				
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "1 0"
+				}				
+				"3"
+				{
+					"color" "0 0 0 255"
+					"offset" "2 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 1"
+				}				
+				"3"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 2"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 1"
+				}				
+				"3"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 2"
+				}
+			}
+		}	
 		
 		TeamMenuBorder
 		{
