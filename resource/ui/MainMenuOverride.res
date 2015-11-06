@@ -1,4754 +1,8753 @@
-"Resource/UI/MainMenuOverride.res"
-{
-	MainMenuOverride
-	{
-		"fieldName"		"MainMenuOverride"
-		"visible"		"1"
-		"enabled"		"1"
-		"xpos"			"0"
-		"ypos"			"0"
-		"zpos"			"0"
-		"wide"			"f0"
-		"tall"			"480"
+//  _________________________
+// |   #M0rehud @ Quakenet   |
+//  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Scheme{Colors{
+		"Orange"			"178 82 22 255"
+		"OrangeDim"			"178 82 22 120"
+		"LightOrange"		"188 112 0 128"
+		"GoalOrange"		"255 133 0"
+		"TFOrange"			"145 73 59 255"
+		"QuestGold"			"208 147 75 255"
+		"White"				"235 235 235 255"
+		"Red"				"192 28 0 140"
+		"RedSolid"			"192 28 0 255"
+		"Blue"				"0 28 162 140"
+		"Yellow"			"251 235 202 255"
+		"TransparentYellow"	"251 235 202 140"
+		//"Black"				"0 0 0 255"
+		//Changed black to a NTSC safe color
+		"GreenSolid"		 "76 107 34 255"
+		"MausBlue"          "0 255 255 255"
+		"Black"				"46 43 42 255"
+		"TransparentBlack"	"0 0 0 196"
+		"TransparentLightBlack"	"0 0 0 90"
+		"FooterBGBlack"		"52 48 55 255"
+		"SolidBlack"        "0 0 0 255"
+		"Blacker"           "20 20 20 255"
 		
-//		"bgcolor_override"	"0 0 0 240"
+		"HUDBlueTeam"		"104 124 155 127"
+		"HUDRedTeam"		"180 92 77 127"
+		"HUDSpectator"		"124 124 124 127"
+		"HUDBlueTeamSolid"	"104 124 155 255"
+		"HUDRedTeamSolid"	"180 92 77 255"
+		"HUDDeathWarning"	"255 0 0 255"
+		"HudWhite"			"255 255 255 255"
+		"HudOffWhite"		"200 187 161 255"
+		"HudBlack"			"65 65 65 255"
+		"ProgressBarBlue"	"91 122 142 255"
 		
-		"update_url"	"http://store.steampowered.com/news/?filter=updates&appids=440"
-		"blog_url"		"http://www.teamfortress.com/"
+		"CreditsGreen"		"94 150 49 255"
 		
-		"button_x_offset"	"-285"
-		"button_y"			"120"
-		"button_y_delta"	"5"
-		"button_kv"
-		{
-			"xpos"			"0"
-			"ypos"			"150"
-			"wide"			"250"
-			"tall"			"26"
-			"visible"		"1"
+		"Gray"				"178 178 178 255"
 
-			"SubButton"
-			{
-				"ControlName"	"CExImageButton"
-				"fieldName"		"SubButton"
-				"xpos"			"0"
-				"ypos"			"0"
-				"wide"			"250"
-				"tall"			"26"
-				"autoResize"	"0"
-				"pinCorner"		"3"
-				"visible"		"1"
-				"enabled"		"1"
-				"tabPosition"	"0"
-				"textinsetx"	"25"
-				"use_proportional_insets" "1"
-				"font"			"HudFontSmallBold"
-				"textAlignment"	"west"
-				"dulltext"		"0"
-				"brighttext"	"0"
-				"default"		"1"
-				"sound_depressed"	"UI/buttonclick.wav"
-				"sound_released"	"UI/buttonclickrelease.wav"
-				
-				"border_default"	"MainMenuButtonDefault"
-				"border_armed"		"MainMenuButtonArmed"
-				"paintbackground"	"0"
-				
-				"defaultFgColor_override" "White"
-				"armedFgColor_override" "235 226 202 255"
-				"depressedFgColor_override" "White"
-				
-				"image_drawcolor"	"117 107 94 255"
-				"image_armedcolor"	"235 226 202 255"
-				"SubImage"
-				{
-					"ControlName"	"ImagePanel"
-					"fieldName"		"SubImage"
-					"xpos"			"6"
-					"ypos"			"6"
-					"zpos"			"1"
-					"wide"			"14"
-					"tall"			"14"
-					"visible"		"1"
-					"enabled"		"1"
-					"scaleImage"	"1"
-				}				
-			}		
-		}
+		"Blank"				"0 0 0 0"
+		"ForTesting"		"255 0 0 32"
+		"ForTesting_Magenta"	"255 0 255 255"
+		"ForTesting_MagentaDim"	"255 0 255 120"
+
+		"HudPanelForeground"		"123 110 59 184"
+		"HudPanelBackground"		"123 110 59 184"
+		"HudPanelBorder"			"255 255 255 102"
+
+		"HudProgressBarActive"		"240 207 78 255"
+		"HudProgressBarInActive"	"140 120 73 255"
+		"HudProgressBarActiveLow"	"240 30 30 255"
+		"HudProgressBarInActiveLow"	"240 30 30 99"	
+
+		"HudTimerProgressActive"	"251 235 202 255"
+		"HudTimerProgressInActive"	"52 48 45 255"
+		"HudTimerProgressWarning"	"240 30 30 255"
+
+		// training
+		"HudTrainingHint"			"212 160 23 255"
 		
-		"SaxxySettings"
+		"TanDark"				"117 107 94 255"
+		"TanLight"				"235 226 202 255"
+		"TanDarker"				"46 43 42 255"
+		
+		"StoreDarkTan"			"131 121 104 255"
+		"StoreGreen"			"76 107 34 255"
+				////////////	CBhud Colors	//////////////
+		
+		//////////	Health Colors	/////////////
+		
+		"CBHealthNormal"	"255 255 255 255"
+		"CBHealthOverheal"	"11 150 224 255"	 //old value: 0 185 255 255
+		"CBHealthLow"	"224 30 115 255"
+		"CBHealthPickup"	"11 150 224 255" //old value: 0 185 255 255
+		
+		/////////	Ammo Colors	/////////////
+		
+		"CBAmmoClipNormal"	"255 255 255 255"
+		"CBAmmoClipLow"		"224 30 115 255"
+		//
+		"CBAmmoReserveNormal"	"11 150 224 255"
+		"CBAmmoReserveLow"		"224 30 115 255"
+		//
+		"CBAmmoNoClipNormal"	"255 255 255 255"
+		"CBAmmoNoClipLow"	"224 30 115 255"
+		
+		/////////	Freezepanel colors	/////////////
+		
+		"CBFreezePanelHealthNormal"	"255 255 255 255"	
+		"CBFreezePanelHealthOverheal"	"11 150 224 255"	
+		"CBFreezePanelHealthLow"		"224 30 115 255"		
+		
+		
+		/////////// Rest	/////////////
+		
+		"CBDropShadow"	"0 0 0 255"
+		
+		"CBUberNormal"	"255 255 255 255"
+		"CBUberFull"			"11 150 224 255"
+		
+		"CBChargemeterBG"	"57 53 52 200"
+		"CBChargeMeterFG"	"255 255 255 255"
+		
+		"MainMenuArmedBG"	"11 150 224 255" //old value: "0 204 255 255"
+		"MainMenuArmedBG2"	"224 30 115 255"
+		
+		"CBpink"		"224 30 115 255"
+		"CBblue"		"11 150 224 255"
+		
+		//stuff from goat_hud for winpanel
+		
+		"OmpText"			"255 255 255 255"
+		"OmpDarkBG"		"30 30 30 225"
+		
+		//stuff from ya_hud for menu
+
+        "ya_MenuFrame"             "18 18 18 255"			//
+        "ya_MenuBG"                "31 31 31 255"			//
+        "ya_MenuHi"                "11 150 224 255"		//Selcted Tab
+        "ya_MenuLo"                "227 227 227 255"			//
+        
+        "FieldBG"               "25 25 25 255"          //Backpack item bg
+        
+        "ButtonBG"              "227 227 227 0"       //Standard button color
+        "ButtonBGArmed"         "227 227 227 0"       //Armed BG color
+        "ButtonBGSelect"        "18 18 18 0"          //Loadout preset
+        
+        "ButtonFont"            "227 227 227 255"          //Font color
+        "ButtonFontArmed"       "224 11 115 255"       //Highlighted font color
+        "ButtonFontSelect"      "11 150 224 255"       //Highlighted font color
+	 
+
+	 
+		//item backdrop color, refers to background color when mousing over items
+		"ItemPanelBG"					"50 50 50 255"	
+		// Building HUD Specific
+		"LowHealthRed"		"255 0 0 255"
+		"ProgressOffWhite"	"251 235 202 255"
+		"ProgressBackground"	"250 234 201 51"
+		"HealthBgGrey"		"72 71 69 255"
+		
+		"ProgressOffWhiteTransparent"	"251 235 202 128"
+		
+		"LabelDark"			"48 43 42 255"
+		"LabelTransparent"	"109 96 80 180"
+		
+		"BuildMenuActive"	"248 231 198 255"
+		
+		"DisguiseMenuIconRed"	"192 56 63 255"
+		"DisguiseMenuIconBlue"	"92 128 166 255"
+
+ 		                "MatchmakingDialogTitleColor"                   "200 184 151 255"
+                "MatchmakingMenuItemBackground"                 "46 43 42 255"
+                "MatchmakingMenuItemBackgroundActive"   "150 71 0 255" 
+                "MatchmakingMenuItemTitleColor"                 "200 184 151 255"
+                "MatchmakingMenuItemDescriptionColor"   "200 184 151 255"
+               
+                "HTMLBackground"                                                "95 92 101 255"
+               
+                "ItemAttribLevel"                                               "117 107 94 255"
+                "ItemAttribNeutral"                                             "235 226 202 255"
+                "ItemAttribPositive"                                    "153 204 255 255"
+                "ItemAttribNegative"                                    "255 64 64 255"
+ 
+                "ItemSetName"                                                   "225 255 15 255"
+                "ItemSetItemEquipped"                                   "149 175 12 255"
+                "ItemSetItemMissing"                                    "139 137 137 255"
+                "ItemIsotope"                                                   "225 255 15 255"
+                "ItemBundleItem"                                                "149 175 12 255"
+                "ItemLimitedUse"                                                "0 160 0 255"
+                "ItemFlags"                                                             "117 107 94 255"
+                "ItemLimitedQuantity"                                   "225 209 0 255"
+               
+                "QualityColorNormal"                                    "178 178 178 255"
+                "QualityColorrarity1"                                   "77 116 85 255"
+                "QualityColorrarity2"                                   "141 131 75 255"
+                "QualityColorrarity3"                                   "204 204 250 255"
+                "QualityColorrarity4"                                   "134 80 172 255"
+                "QualityColorVintage"                                   "71 98 145 255"
+                "QualityColorUnique"                                    "255 215 0 255"
+                "QualityColorCommunity"                                 "112 176 74 255"
+                "QualityColorDeveloper"                                 "165 15 121 255"
+                "QualityColorSelfMade"                                  "112 176 74 255"
+                "QualityColorCustomized"                                "71 98 145 255"
+                "QualityColorStrange"                                   "207 106 50 255"
+                "QualityColorCompleted"                                 "134 80 172 255"
+                "QualityColorHaunted"                                   "56 243 171 255"
+                "QualityColorCollectors"                                "170 0 0 255"
+                "QualityColorPaintkitWeapon"                    "250 250 250 255"
+ 
+                "ItemRarityDefault"                                             "131 126 119 255"
+                "ItemRarityCommon"                                              "176 195 217 255"
+                "ItemRarityUncommon"                                    "94 152 217 255"
+                "ItemRarityRare"                                                "75 105 255 255"
+                "ItemRarityMythical"                                    "136 71 255 255"
+                "ItemRarityLegendary"                                   "211 44 230 255"
+                "ItemRarityAncient"                                             "235 75 75 255"
+               
+                "ItemRarityDefault_GreyedOut"                   "44 42 40 255"
+                "ItemRarityCommon_GreyedOut"                    "59 65 72 255"
+                "ItemRarityUncommon_GreyedOut"                  "31 50 72 255"
+                "ItemRarityRare_GreyedOut"                              "25 35 85 255"
+                "ItemRarityMythical_GreyedOut"                  "45 24 85 255"
+                "ItemRarityLegendary_GreyedOut"                 "70 15 77 255"
+                "ItemRarityAncient_GreyedOut"                   "78 25 25 255"
+               
+                "QualityColorNormal_GreyedOut"                  "44 44 44 255"
+                "QualityColorrarity1_GreyedOut"                 "20 29 21 255"
+                "QualityColorrarity2_GreyedOut"                 "35 33 19 255"
+                "QualityColorrarity3_GreyedOut"                 "51 51 62 255"
+                "QualityColorrarity4_GreyedOut"                 "36 20 43 255"
+                "QualityColorVintage_GreyedOut"                 "18 25 36 255"
+                "QualityColorUnique_GreyedOut"                  "64 54 0  255"
+                "QualityColorCommunity_GreyedOut"               "28 44 19 255"
+                "QualityColorDeveloper_GreyedOut"               "41 4  30  255"
+                "QualityColorSelfMade_GreyedOut"                "28 44 74 255"
+                "QualityColorCustomized_GreyedOut"              "71 98 19 255"
+                "QualityColorStrange_GreyedOut"                 "52 27 13 255"
+                "QualityColorCompleted_GreyedOut"               "34 20 43 255"
+                "QualityColorHaunted_GreyedOut"                 "14 61 43 255"
+                "QualityColorCollectors_GreyedOut"              "60 0 0 255"
+                "QualityColorPaintkitWeapon_GreyedOut"  "60 60 60 255"
+               
+                "SaleGreen"                                                             "76 107 34 255"
+               
+                "LightRed"                                                              "200 80 60 255"
+                "LighterRed"                                                    "220 100 80 255"
+                "LighterDarkBrown"                                              "59 54 48 255"
+                "DarkBrown"                                                             "41 37 38 255"
+               
+                "UpgradeDefaultFg"              "87 82 74 255"
+                "UpgradeDefaultBg"              "111 104 94 255"
+                "UpgradeArmedFg"                "194 96 47 255"
+                "UpgradeArmedBg"                "239 128 73 255"
+                "UpgradeDepressedFg"    "204 106 57 255"
+                "UpgradeDepressedBg"    "249 138 83 255"
+                "UpgradeSelectedFg"             "204 106 57 255"
+                "UpgradeSelectedBg"             "249 138 83 255"
+                "UpgradeDisabledFg"             "64 59 52 255"
+                "UpgradeDisabledBg"             "79 77 68 255"
+        
+		
+		//Custom color defintions
+		"M0reBlue"				"0 120 201 255"
+		"M0reRed"				"235 58 58 255"
+	}
+BaseSettings
+	{
+		// vgui_controls color specifications
+		ReplayBrowser.BgColor								"DarkBrown"
+		ReplayBrowser.Details.TitleEdit.Carat.FgColor		"LightRed"
+		ReplayBrowser.Button.ArmedBgColor					"TFOrange"
+		ReplayBrowser.Button.DepressedBgColor				"TFOrange"
+		ReplayBrowser.CollectionTitle.FgColor				"LightRed"
+		ReplayBrowser.Warning.FgColor						"White"
+		ReplayBrowser.ScrollBar.SliderButton.FgColor		"TransparentYellow"
+		ReplayBrowser.Search.BgColor						"TanDark"
+		ReplayBrowser.Search.FgColor						"White"
+		
+		Replay.RenderDialog.BgColor							"LighterDarkBrown"
+		
+		Econ.Dialog.BgColor									"Blank"
+		Econ.Button.BgColor									"TanDark"
+		Econ.Button.FgColor									"TanLight"
+		Econ.Button.ArmedBgColor							"TFOrange"
+		Econ.Button.ArmedFgColor							"TanLight"
+		Econ.Button.DepressedBgColor						"TFOrange"
+		Econ.Button.DepressedFgColor						"Black"
+		
+		Econ.Button.PresetDefaultColorFg					"TanLight"
+		Econ.Button.PresetArmedColorFg						"TanLight"
+		Econ.Button.PresetDepressedColorFg					"TanLight"
+		
+		Econ.Button.PresetDefaultColorBg					"LighterRed"
+		Econ.Button.PresetArmedColorBg						"LightRed"
+		Econ.Button.PresetDepressedColorBg					"TFOrange"
+		
+		Border.Bright					"Blank"		// the lit side of a control
+		Border.Dark						"Black"		// the dark/unlit side of a control
+		Border.Selection				"Gray"			// the additional border color for displaying the default/selected button
+
+		Button.TextColor				"TanLight"
+		Button.BgColor					"TanDark"
+		Button.ArmedTextColor			"TanLight"
+		Button.ArmedBgColor				"TFOrange"
+		Button.SelectedTextColor		"TanLight"
+		Button.SelectedBgColor			"TFOrange"
+		Button.DepressedTextColor		"Black"
+		Button.DepressedBgColor			"TFOrange"
+
+		CheckButton.TextColor			"Yellow"
+		CheckButton.SelectedTextColor	"Yellow"
+		CheckButton.BgColor				"TransparentBlack"
+		CheckButton.Border1  			"Yellow" 		// the left checkbutton border
+		CheckButton.Border2  			"Yellow"		// the right checkbutton border
+		CheckButton.Check				"Yellow"		// color of the check itself
+		CheckButton.HighlightFgColor	"Yellow"
+		
+		ComboBoxButton.ArrowColor		"TanLight"
+		ComboBoxButton.ArmedArrowColor	"TanLight"
+		ComboBoxButton.BgColor			"Blank"
+		ComboBoxButton.DisabledBgColor	"Blank"
+
+		Frame.BgColor					"TransparentBlack"
+		Frame.OutOfFocusBgColor			"TransparentBlack"
+		Frame.FocusTransitionEffectTime	"0.0"	[$WIN32] // time it takes for a window to fade in/out on focus/out of focus
+		Frame.TransitionEffectTime		"0.0"	[$WIN32] // time it takes for a window to fade in/out on open/close
+		Frame.FocusTransitionEffectTime	"0.15"	[$X360] // time it takes for a window to fade in/out on focus/out of focus
+		Frame.TransitionEffectTime		"0.15"	[$X360] // time it takes for a window to fade in/out on open/close
+		Frame.AutoSnapRange				"0"
+		FrameGrip.Color1				"Blank"
+		FrameGrip.Color2				"Blank"
+		FrameTitleButton.FgColor		"Blank"
+		FrameTitleButton.BgColor		"Blank"
+		FrameTitleButton.DisabledFgColor	"Blank"
+		FrameTitleButton.DisabledBgColor	"Blank"
+		FrameSystemButton.FgColor		"Blank"
+		FrameSystemButton.BgColor		"Blank"
+		FrameSystemButton.Icon			""
+		FrameSystemButton.DisabledIcon	""
+		FrameTitleBar.TextColor			"Orange"
+		FrameTitleBar.BgColor			"Blank"
+		FrameTitleBar.DisabledTextColor	"Orange"
+		FrameTitleBar.DisabledBgColor	"Blank"
+
+		GraphPanel.FgColor				"Orange"
+		GraphPanel.BgColor				"TransparentBlack"
+
+		Label.TextDullColor				"TanDark"
+		Label.TextColor					"TanLight"
+		Label.TextBrightColor			"TanLight"
+		Label.SelectedTextColor			"White"
+		Label.BgColor					"Blank"
+		Label.DisabledFgColor1			"Blank"
+		Label.DisabledFgColor2			"Black"
+
+		ListPanel.TextColor					"Orange"
+		ListPanel.BgColor					"TransparentBlack"
+		ListPanel.SelectedTextColor			"Black"
+		ListPanel.SelectedBgColor			"Red"
+		ListPanel.SelectedOutOfFocusBgColor	"Red"
+		ListPanel.EmptyListInfoTextColor	"Orange"
+
+		Menu.TextColor					"TanLight"
+		Menu.BgColor					"TransparentBlack"
+		Menu.ArmedTextColor				"TanDark"
+		Menu.ArmedBgColor				"TanLight"
+		Menu.TextInset					"6"
+
+		Chat.TypingText					"Orange"
+
+		Panel.FgColor					"Gray"
+		Panel.BgColor					"Blank"
+
+		HTML.BgColor					"Blank"
+
+		ProgressBar.FgColor				"ProgressOffWhite"
+		ProgressBar.BgColor				"ProgressBackground"
+
+		CircularProgressBar.FgColor		"White"
+		CircularProgressBar.BgColor		"White"
+		
+		"BuildingHealthBar.BgColor"		"HealthBgGrey"
+		"BuildingHealthBar.Health"		"ProgressOffWhite"
+		"BuildingHealthBar.LowHealth"	"LowHealthRed"
+
+		PropertySheet.TextColor			"Orange"
+		PropertySheet.SelectedTextColor	"Orange"
+		PropertySheet.TransitionEffectTime	"0.25"	// time to change from one tab to another
+
+		RadioButton.TextColor			"Orange"
+		RadioButton.SelectedTextColor	"Orange"
+
+		RichText.TextColor				"Gray"
+		RichText.BgColor				"Blank"
+		RichText.SelectedTextColor		"Gray"
+		RichText.SelectedBgColor		"Red"
+
+		ScrollBarButton.FgColor				"Gray"
+		ScrollBarButton.BgColor				"Blank"
+		ScrollBarButton.ArmedFgColor		"Gray"
+		ScrollBarButton.ArmedBgColor		"Blank"
+		ScrollBarButton.DepressedFgColor	"Black"
+		ScrollBarButton.DepressedBgColor	"Blank"
+
+		ScrollBarSlider.FgColor				"Gray"		// nob color
+		ScrollBarSlider.BgColor				"Blank"		// slider background color
+
+		SectionedListPanel.HeaderTextColor	"Orange"
+		SectionedListPanel.HeaderBgColor	"Blank"
+		SectionedListPanel.DividerColor		"Black"
+		SectionedListPanel.TextColor		"Orange"
+		SectionedListPanel.BrightTextColor	"Orange"
+		SectionedListPanel.BgColor			"TransparentLightBlack"
+		SectionedListPanel.SelectedTextColor			"Black"
+		SectionedListPanel.SelectedBgColor				"Red"
+		SectionedListPanel.OutOfFocusSelectedTextColor	"Black"
+		SectionedListPanel.OutOfFocusSelectedBgColor	"255 255 255 32"
+
+		Slider.NobColor				"108 108 108 255"
+		Slider.TextColor			"127 140 127 255"
+		Slider.TrackColor			"31 31 31 255"
+		Slider.DisabledTextColor1	"117 117 117 255"
+		Slider.DisabledTextColor2	"30 30 30 255"
+
+		TextEntry.TextColor			"Gray"
+		TextEntry.BgColor			"Blank"
+		TextEntry.CursorColor		"Gray"
+		TextEntry.DisabledTextColor	"Gray"
+		TextEntry.DisabledBgColor	"Blank"
+		TextEntry.SelectedTextColor	"TanLight"
+		TextEntry.SelectedBgColor	"Gray"
+		TextEntry.OutOfFocusSelectedBgColor	"Blank"
+		TextEntry.FocusEdgeColor	"Blank"
+
+		ToggleButton.SelectedTextColor	"Orange"
+
+		Tooltip.TextColor			"TransparentBlack"
+		Tooltip.BgColor				"Red"
+
+		TreeView.BgColor			"TransparentBlack"
+
+		WizardSubPanel.BgColor		"Blank"
+		
+		TimerProgress.Active		"HudTimerProgressActive"
+		TimerProgress.InActive		"HudTimerProgressInActive"
+		TimerProgress.Warning		"HudTimerProgressWarning"
+
+		HudObjectives.FgColor		"HudPanelForeground"
+		HudObjectives.BgColor		"HudPanelBackground"
+		HudObjectives.BorderColor	"HudPanelBorder"
+				
+		HudProgressBar.Active		"HudProgressBarActive"
+		HudProgressBar.InActive		"HudProgressBarInActive"
+		
+		HudCaptureIcon.Active		"HudProgressBarActive"
+		HudCaptureIcon.InActive		"HudProgressBarInActive"
+		HudCaptureProgressBar.Active	"HudProgressBarActive"
+		HudCaptureProgressBar.InActive	"HudProgressBarInActive"
+
+		// scheme-specific colors
+		"FgColor"		"Orange"
+		"BgColor"		"TransparentBlack"
+
+		"ViewportBG"		"Blank"
+		"TeamSpec"			"204 204 204 255"
+		"TeamRed"			"255 64 64 255"
+		"TeamBlue"			"153 204 255 255"
+
+		"MapDescriptionText"	"Gray" // the text used in the map description window
+		"HudIcon_Green"		"0 160 0 255"
+		"HudIcon_Red"		"160 0 0 255"
+
+		// CHudMenu
+		"ItemColor"		"255 167 42 200"	// default 255 167 42 255
+		"MenuColor"		"233 208 173 255"
+		"MenuBoxBg"		"0 0 0 100"
+
+		// weapon selection colors
+		"SelectionNumberFg"		"251 235 202 255"
+		"SelectionTextFg"		"251 235 202 255"
+		"SelectionEmptyBoxBg" 	"0 0 0 80"
+		"SelectionBoxBg" 		"0 0 0 80"
+		"SelectionSelectedBoxBg" "0 0 0 190"
+
+		// Hint message colors
+		"HintMessageFg"			"255 255 255 255"
+		"HintMessageBg" 		"0 0 0 60"
+
+		"ProgressBarFg"			"255 30 13 255"
+
+		// Top-left corner of the menu on the main screen
+		"Main.Menu.X"		"32"
+		"Main.Menu.Y"		"248"
+
+		// Blank space to leave beneath the menu on the main screen
+		"Main.BottomBorder"	"32"
+		
+		"VguiScreenCursor"			"255 208 64 255"
+	}
+
+	//////////////////////// BITMAP FONT FILES /////////////////////////////
+	//
+	// Bitmap Fonts are ****VERY*** expensive static memory resources so they are purposely sparse
+	BitmapFontFiles
+	{
+		// UI buttons, custom font, (256x64)
+		"Buttons"		"materials/vgui/fonts/buttons_32.vbf"
+	}
+
+
+	//
+	//////////////////////// FONTS /////////////////////////////
+	//
+	// describes all the fonts
+	Fonts
+	{
+		// fonts are used in order that they are listed
+		// fonts listed later in the order will only be used if they fulfill a range not already filled
+		// if a font fails to load then the subsequent fonts will replace
+		"size: 10, outline: off"
 		{
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"-101"		
-			"wide"			"f0"
-			"tall"			"480"
-			
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			
-			"flashbounds_x"	"50"
-			"flashbounds_y"	"65"
-			"flashbounds_w"	"250"
-			"flashbounds_h"	"120"
-			
-			"flashstartsize_min"	"8"
-			"flashstartsize_max"	"12"
-			
-			"flash_maxscale"		"4"
-			
-			"flash_lifelength_min"	".1"
-			"flash_lifelength_max"	".2"
-			
-			"curtain_anim_duration"		"4.0"
-			"curtain_open_time"		"2.8"
-			"flash_start_time"		"4.0"
-			
-			"initial_freakout_duration"		"15.0"
-			"clap_sound_duration"	"10.0"
-			
-			"CameraFlashSettings"
+			"1"
 			{
-				"visible"		"1"
-				"enabled"		"1"
-				"tileImage"		"0"
-				"scaleImage"	"1"
-				"zpos"			"9"
+				"name"	"broeselhud Crosshairs"
+				"tall"	"10"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
 			}
 		}
-	}	
-
-	"mouseoveritempanel"
-	{
-		"ControlName"	"CItemModelPanel"
-		"fieldName"		"mouseoveritempanel"
-		"xpos"			"c-70"
-		"ypos"			"270"
-		"zpos"			"100"
-		"wide"			"300"
-		"tall"			"300"
-		"visible"		"0"
-		"bgcolor_override"		"0 0 0 0"
-		"noitem_textcolor"		"117 107 94 255"
-		"PaintBackgroundType"	"2"
-		"paintborder"	"1"
-		"border"		"MainMenuBGBorder"
-		
-		"text_ypos"			"20"
-		"text_center"		"1"
-		"model_hide"		"1"
-		"resize_to_text"	"1"
-		"padding_height"	"15"
-		
-		"attriblabel"
+		"size: 11, outline: off"
 		{
-			"font"			"ItemFontAttribLarge"
-			"xpos"			"0"
-			"ypos"			"30"
-			"zpos"			"2"
-			"wide"			"140"
-			"tall"			"60"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"labelText"		"%attriblist%"
-			"textAlignment"	"center"
-			"fgcolor"		"117 107 94 255"
-			"centerwrap"	"1"
-		}
-	}
-	
-	"Background"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"Background"
-		"xpos"			"0"
-		"ypos"			"0"
-		"zpos"			"-200"
-		"wide"			"f0"
-		"tall"			"480"
-		"visible"		"0"
-		"enabled"		"1"
-		"image"			""
-		"scaleImage"	"1"
-		
-		if_halloween_0
-		{
-			"image"		""
-		}
-		if_halloween_1
-		{
-			"image"		""
-		}
-		if_halloween_2
-		{
-			"image"		""
-		}
-		if_halloween_3
-		{
-			"image"		""
-		}
-		if_fullmoon
-		{
-			"image"		""
-		}
-		if_christmas
-		{
-			"image"		""
-		}
-	}
-					
-	"TFLogoImage"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"TFLogoImage"
-		"xpos"			"999999"
-		"ypos"			"999999"
-	}	
-	
-	"TFCharacterImage"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"TFCharacterImage"
-		"xpos"			"999999"
-		"ypos"			"999999"
-	}
-	
-	"MainMenuBGPanel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"MainMenuBGPanel"
-		"xpos"			"999999"
-		"ypos"			"999999"
-	}	
-	"PlayLabel"
-	{
-		"ControlName"	"CExLabel"
-		"fieldName"		"PlayLabel"
-		"xpos"			"999999"
-		"ypos"			"999999"
-
-	}
-	
-	"TooltipPanel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"TooltipPanel"
-		"xpos"			"0"
-		"ypos"			"0"
-		"zpos"			"1"
-		"wide"			"150"
-		"tall"			"50"
-		"visible"		"0"
-		"PaintBackgroundType"	"2"
-		"border"		"MainMenuBGBorder"
-		
-		"TipSubLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TipSubLabel"
-			"font"			"HudFontSmall"
-			"labelText"		"%tipsubtext%"
-			"textAlignment"	"center"
-			"xpos"			"20"
-			"ypos"			"30"
-			"zpos"			"2"
-			"wide"			"250"
-			"tall"			"50"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"fgcolor_override"	"117 107 94 255"
-			"wrap"			"1"
-		}
-		
-		"TipLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TipLabel"
-			"font"			"HudFontSmallBold"
-			"labelText"		"%tiptext%"
-			"textAlignment"	"center"
-			"xpos"			"20"
-			"ypos"			"5"
-			"zpos"			"2"
-			"wide"			"140"
-			"tall"			"30"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"fgcolor_override"	"235 226 202 255"
-			"auto_wide_tocontents" "1"
-		}
-	}	
-	
-	"CreateServerButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"CreateServerButton"
-		"xpos"			"0"
-		"ypos"			"7"
-		"zpos"			"12"
-		"wide"			"6"
-		"tall"			"50"
-		"visible"		"1"
-
-		
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"6"
-			"tall"			"50"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-
-			"font"			"roboto10"
-			"textAlignment"	"West"
-			"TextInSetX"	"1"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite1"
-			
-			"defaultBgColor_override" 	"25 25 25 255"
-			"armedBgColor_override" 	"25 25 25 255"
-			"depressedBgColor_override" "25 25 25 255"
-			
-			
-			"defaultFgColor_override" 	"255 255 255 255"
-			"armedFgColor_override" 	"255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
+			"1"
 			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"4"
-				"ypos"			"4"
-				"zpos"			"1"
-				"wide"			"0"
-				"tall"			"0"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"glyph_create"
-				"scaleImage"	"1"
-			}				
-		}		
-	}
-
-	"TopRightContainer"
-	{
-			"ControlName"	"EditablePanel"
-			"fieldName"		"TopRightContainer"
-			"xpos"			"c95"
-			"ypos"			"26"
-			"zpos"			"0"
-			"wide"			"212"
-			"tall"			"36"
-			"autoResize"	"3"
-			"pinCorner"		"0"
-			"visible"		"0"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"border"		"MainMenuBGBorder"
-			"PaintBackgroundType"	"2"
-	}
-
-	"Notifications_ShowButtonPanel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"Notifications_ShowButtonPanel"
-		"xpos"				"r183"
-		"ypos"				"12"
-		"zpos"				"10"
-		"wide"				"40"
-		"tall"				"40"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		
-		"SubImage"
+				"name"	"broeselhud Crosshairs"
+				"tall"	"11"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 12, outline: off"
 		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"24"
-			"ypos"			"0"
-			"zpos"			"3"
-			"wide"			"16"
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"12"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 13, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"13"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 14, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"14"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 15, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"15"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 16, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"16"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 17, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"17"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 18, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"18"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 19, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"19"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 20, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"20"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 21, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"21"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 22, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"22"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 23, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"23"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 24, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"24"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 25, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"25"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 26, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"26"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 27, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"26"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 28, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"28"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 29, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"29"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 30, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"30"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 31, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"31"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 32, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"32"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 33, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"33"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 34, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"34"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 35, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"35"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 36, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"36"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 37, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"37"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 38, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"38"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 39, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"39"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 40, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"40"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 41, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"41"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 42, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"42"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 43, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"43"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 44, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"44"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 45, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"45"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 46, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"46"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 47, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"47"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 48, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"48"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 49, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"49"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 50, outline: off"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"50"
+				"antialias" "1"
+				"additive"	"0"
+				"outline"	"0"
+			}
+		}
+		"size: 12, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"12"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 13, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"13"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 14, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"14"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 15, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"15"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 16, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"16"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 17, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"17"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 18, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"18"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 19, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"19"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 20, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"20"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 21, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"21"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 22, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"22"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 23, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"23"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 24, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"24"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 25, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"25"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 26, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"26"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 27, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"26"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 28, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"28"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 29, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"29"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 30, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"30"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 31, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"31"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 32, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"32"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 33, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"33"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 34, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"34"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 35, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"35"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 36, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"36"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 37, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"37"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 38, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"38"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 39, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"39"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 40, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"40"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 41, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"41"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 42, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"42"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 43, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"43"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 44, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"44"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 45, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"45"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 46, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"46"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 47, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"47"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 48, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"48"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 49, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"49"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"size: 50, outline: on"
+		{
+			"1"
+			{
+				"name"	"broeselhud Crosshairs"
+				"tall"	"50"
+				"antialias" "0"
+				"additive"	"0"
+				"outline"	"1"
+			}
+		}
+		"fogcrosshair36"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "36"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		"fogcrosshair28"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "28"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		"fogcrosshair27"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "27"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		"fogcrosshair26"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "26"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		"fogcrosshair24"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "24"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		"fogcrosshair22"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "22"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		"fogcrosshair20"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "20"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		"fogcrosshair18"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "18"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		"fogcrosshair16"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "16"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		"fogcrosshair15"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "15"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		"fogcrosshair14"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "14"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		"fogcrosshair12"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "12"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		"fogcrosshair10"
+		{
+		   "1"
+		   {
+				"name" "Crosshairs"
+				"tall" "10"
+				"weight" "0"
+				"antialias" "1"
+				"outline" "1"
+		    }
+		}
+		Coolvetica
+		{
+			"1"
+			{
+				"name"		"Coolvetica"
+				"tall"		"15"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		fogCrosshair
+		{
+			"1"
+			{
+				"name"		"Crosshairs"
+				"tall"		"28" //28 default
+				"additive"	"0"
+				"antialias" 	"0"
+				"weight"	"0"
+				"outline"	"1"
+			}
+		}
+		fogCrosshairPlain
+		{
+			"1"
+			{
+				"name"		"Crosshairs"
+				"tall"		"28"
+				"additive"	"0"
+				"antialias" 	"0"
+				"weight"	"0"
+				"outline"	"0"
+			}
+		}
+		fogCrosshairSmooth
+		{
+			"1"
+			{
+				"name"		"Crosshairs"
+				"tall"		"28"
+				"additive"	"0"
+				"antialias" 	"1"
+				"weight"	"0"
+				"outline"	"0"
+			}
+		}
+		M0refont8
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"8"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		 "CrossHairNormal"
+		{
+			"1"
+			{
+				"name"    "tf2cross"
+				"tall"    "11"
+				"weight"  "0"
+				"antialias"  "1"
+				"additive"  "0"
+				"outline"   "0"
+			}
+		}
+		 "CrossHairNormalOutline"
+		{
+			"1"
+			{
+				"name"    "tf2cross"
+				"tall"    "11"
+				"weight"  "0"
+				"antialias"  "1"
+				"additive"  "0"
+				"outline"   "1"
+			}
+		}
+		M0reNumbers14score
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"14"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0reNumbers14
+		{
+			"1"
+			{
+				"name"		"Surface Numbers Medium"
+				"tall"		"14"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0reNumbers16
+		{
+			"1"
+			{
+				"name"		"Surface Numbers Medium"
+				"tall"		"16"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0reNumbers18
+		{
+			"1"
+			{
+				"name"		"Surface Numbers Medium"
+				"tall"		"18"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0refont10
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"10"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0refont12
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"12"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"1"
+			}
+		}
+		M0refont14
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"14"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0refont16
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"16"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0refont18
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"18"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0refont18Outline
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"18"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"1"
+			}
+		}
+		M0refont19Outline
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"19"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"1"
+			}
+		}
+		M0refont20Outline
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"20"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"1"
+			}
+		}
+		M0refont21Outline
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"21"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"1"
+			}
+		}
+		M0refont22Outline
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"22"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"1"
+			}
+		}
+		M0refont23Outline
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"23"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"1"
+			}
+		}
+		M0refont24
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"24"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0refont24Outline
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"24"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"1"
+			}
+		}
+		M0refont26
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"26"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"1"
+			}
+		}
+		M0refont28
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"28"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0refont30
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"30"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0refont32
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"32"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0refont36
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"36"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0refont36Outline
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"36"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"1"
+			}
+		}
+		M0refont48
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"48"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0refont60
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"60"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		M0refont72
+		{
+			"1"
+			{
+				"name"		"Surface-Medium"
+				"tall"		"72"
+				"additive"	"0"
+				"antialias" 	"1"
+				"outline"	"0"
+			}
+		}
+		"CrossHairKonrWings"
+		{
+			"1"
+			{
+				"name"		"Garm3nFont"
+				"tall"		"18"
+				"weight"	"0"
+				"antialias"	"1"
+			}
+		}
+		"CrossHairKonrWings2"
+		{
+			"1"
+			{
+				"name"		"Garm3nFont"
+				"tall"		"16"
+				"weight"	"0"
+				"antialias"	"1"
+			}
+		}
+		"xHairCircle"
+		{
+			"1"
+			{
+				"name"		"Courier New"
+				"tall"		"72"
+				"weight"	"0"
+				"antialias"	"1"
+			}
+		}
+		
+		"xHairCircleOutline"
+		{
+			"1"
+			{
+				"name"		"Courier New"
+				"tall"		"72"
+				"weight"	"0"
+				"antialias"	"1"
+				"outline"	"1"
+			}
+		}
+
+		"Crosshairs8"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"8"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"Crosshairs10"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"10"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"Crosshairs12"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"12"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"Crosshairs14"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"14"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"Crosshairs16"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"16"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"Crosshairs18"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"18"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+
+		"CrosshairsOutline18"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"18"
+			"weight" 		"0"
+			"antialias" 	"1"
+			"outline"		"1"
+			}
+		}
+		
+		"Crosshairs20"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"20"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"Crosshairs22"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"22"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"Crosshairs24"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"24"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"CrosshairsOutline24"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"24"
+			"weight" 		"0"
+			"antialias" 	"1"
+			"outline"		"1"
+			}
+		}
+		
+		"Crosshairs26"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"26"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"CrosshairsOutline26"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"26"
+			"weight" 		"0"
+			"antialias" 	"1"
+			"outline"		"1"
+			}
+		}
+		
+		"Crosshairs28"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"28"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"Crosshairs30"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"30"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"Crosshairs32"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"32"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+
+		"CrosshairsOutline32"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"32"
+			"weight" 		"0"
+			"antialias" 	"1"
+			"outline"		"1"
+			}
+		}
+		
+		"Crosshairs34"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"34"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"CrosshairsOutline34"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"34"
+			"weight" 		"0"
+			"antialias" 	"1"
+			"outline"		"1"
+			}
+		}
+		
+		"Crosshairs36"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"36"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"Crosshairs38"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"38"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"Crosshairs40"
+		{
+			"1"
+			{
+			"name"			"Crosshairs"
+			"tall" 			"40"
+			"weight" 		"0"
+			"antialias" 	"1"
+			}
+		}
+		
+		"Symbol16"
+		{
+			"1"
+			{
+			"name"			"Symbol"
 			"tall"			"16"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"glyph_achievements"
-			"scaleImage"	"1"
-			"drawcolor" 	"11 150 224 255"
-		}				
+			"weight"		"0"
+			"antialias"		"1"
+			}
+		}
 		
-		"Notifications_CountLabel"
+		"Symbol24"
 		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"Notifications_CountLabel"
-			"font"			"HudFontSmallestBold"
-			"labelText"		"%noticount%"
-			"textAlignment"	"center"
-			"xpos"			"24"
-			"ypos"			"0"
-			"zpos"			"4"
-			"wide"			"16"
+			"1"
+			{
+			"name"			"Symbol"
+			"tall"			"24"
+			"weight"		"0"
+			"antialias"		"1"
+			}
+		}
+		
+		"SymbolOutline24"
+		{
+			"1"
+			{
+			"name"			"Symbol"
+			"tall"			"24"
+			"weight"		"0"
+			"antialias"		"1"
+			"outline"		"1"
+			}
+		}
+		"SymbolOutline26"
+		{
+			"1"
+			{
+			"name"			"Symbol"
+			"tall"			"26"
+			"weight"		"0"
+			"antialias"		"1"
+			"outline"		"1"
+			}
+		}
+		"SymbolOutline28"
+		{
+			"1"
+			{
+			"name"			"Symbol"
+			"tall"			"28"
+			"weight"		"0"
+			"antialias"		"1"
+			"outline"		"1"
+			}
+		}
+		"SymbolOutline32"
+		{
+			"1"
+			{
+			"name"			"Symbol"
+			"tall"			"32"
+			"weight"		"0"
+			"antialias"		"1"
+			"outline"		"1"
+			}
+		}
+		"Symbol32"
+		{
+			"1"
+			{
+			"name"			"Symbol"
+			"tall"			"32"
+			"weight"		"0"
+			"antialias"		"1"
+			}
+		}
+		
+		"Symbol40"
+		{
+			"1"
+			{
+			"name"			"Symbol"
+			"tall"			"40"
+			"weight"		"0"
+			"antialias"		"1"
+			}
+		}
+		"KonrWings16"
+		{
+			"1"
+			{
+			"name"			"Garm3nFont"
 			"tall"			"16"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"fgcolor_override"	"255 255 255 255"
-		}
-	
-		"Notifications_ShowButtonPanel_SB"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"Notifications_ShowButtonPanel_SB"
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"1"
-			"wide"			"40"
-			"tall"			"40"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"labelText"		"b"
-			"font"			"cbhud21"
-			"textAlignment"	"center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-
-			"Command"		"noti_show"
-
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-		
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite2"
-			
-			"defaultFgColor_override" 	"255 255 255 255"
-			"armedFgColor_override" 	"255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"	
-
-			"defaultBgColor_override" 	"25 25 25 200"
-			"armedBgColor_override" 	"25 25 25 200"
-			"depressedBgColor_override" "25 25 25 200"
-		
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"1"
-				"wide"			"0"
-				"tall"			"0"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"button_Alert"
-				"scaleImage"	"1"
+			"weight"		"0"
+			"antialias"		"1"
 			}
 		}
-	}
-
-	"QuestLogButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"QuestLogButton"
-		"xpos"				"r142"
-		"ypos"				"12"
-		"zpos"				"8"
-		"wide"				"40"
-		"tall"				"40"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"	"0"
-
-		
-		"SubButton"
+		"KonrWings18"
 		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"40"
-			"tall"			"40"
-			
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			
-			"labelText"		"J"
-
-			"font"				"cbhud26"
-			"command"		"questlog"
-			"textAlignment"	"Center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			"actionsignallevel" "2"
-			"proportionaltoparent"	"1"
-				
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite2"
-			
-			"defaultFgColor_override" 	"255 255 255 255"
-			"armedFgColor_override" 	"255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"defaultBgColor_override" 	"25 25 25 200"
-			"armedBgColor_override" 	"25 25 25 200"
-			"depressedBgColor_override" "25 25 25 200"			
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-
-			"SubImage"
+			"1"
 			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"cs-0.5"
-				"ypos"			"cs-0.5"
-				"zpos"			"1"
-				"wide"			"f0"
-				"tall"			"f0"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-				"image"			"button_quests"
-
-				"proportionaltoparent"	"1"
-				"mouseinputenabled"	"0"
-				"keyboardinputenabled" "0"
-			}		
-		}
-		
-		"NotificationsContainer"
-		{
-			"ControlName"	"EditablePanel"
-			"fieldName"		"NotificationsContainer"
-			"xpos"			"rs1"
-			"ypos"			"0"
-			"zpos"			"10"
-			"wide"			"16"
-			"tall"			"16"
-			"visible"		"0"
-			"proportionaltoparent"	"1"
-			"mouseinputenabled"	"0"
-			"keyboardinputenabled" "0"
-
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"cs-0.5"
-				"ypos"			"cs-0.5"
-				"zpos"			"3"
-				"wide"			"16"
-				"tall"			"16"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"glyph_achievements"
-				"scaleImage"	"1"
-				"drawcolor" "11 150 224 255"
-				"proportionaltoparent"	"1"
-			}				
-		
-			"Notifications_CountLabel"
-			{
-				"ControlName"	"CExLabel"
-				"fieldName"		"Notifications_CountLabel"
-				"font"			"HudFontSmallestBold"
-				"labelText"		"%noticount%"
-				"textAlignment"	"center"
-				"xpos"			"cs-0.5"
-				"ypos"			"cs-0.5"
-				"zpos"			"4"
-				"wide"			"16"
-				"tall"			"16"
-				"autoResize"	"0"
-				"pinCorner"		"0"
-				"visible"		"1"
-				"enabled"		"1"
-				"fgcolor_override"	"255 255 255 255"
-				"proportionaltoparent"	"1"
-			}
-		}
-	}
-	
-	"MOTD_ShowButtonPanel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"MOTD_ShowButtonPanel"
-		"xpos"				"r101"
-		"ypos"				"12"
-		"zpos"				"8"
-		"wide"				"40"
-		"tall"				"40"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-
-
-		"MOTD_ShowButtonPanel_SB"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"MOTD_ShowButtonPanel_SB"
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"1"
-			"wide"				"40"
-			"tall"				"40"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			
-			"labelText"		"q"
-			"font"			"cbhud26"
-			"textAlignment"	"center"
-			
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-
-			"Command"		"motd_show"
-
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite2"			
-			
-			"defaultFgColor_override" 	"255 255 255 255"
-			"armedFgColor_override" 	"255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"defaultBgColor_override" 	"25 25 25 200"
-			"armedBgColor_override" 	"25 25 25 200"
-			"depressedBgColor_override" "25 25 25 200"			
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"1"
-				"wide"			"0"
-				"tall"			"0"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"button_MOTD"
-				"scaleImage"	"1"
-			}
-		}
-	}
-	
-	"MOTD_Panel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"MOTD_Panel"
-		"xpos"			"c5"
-		"ypos"			"65"
-		"zpos"			"1"
-		"wide"			"300"
-		"tall"			"350"
-		"visible"		"0"
-		"PaintBackgroundType"	"2"
-		"paintbackground"	"0"
-		"border"		"MainMenuHighlightBorder"
-
-		
-		"MOTD_HeaderContainer"
-		{
-			"ControlName"	"EditablePanel"
-			"fieldName"		"MOTD_HeaderContainer"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"300"
-			"tall"			"22"
-			"visible"		"1"
-			
-			"MOTD_HeaderLabel"
-			{
-				"ControlName"	"CExLabel"
-				"fieldName"		"MOTD_HeaderLabel"
-				"font"			"HudFontSmallBold"
-				"textAlignment"	"center"
-				"labelText"		"%motdheader%"
-				"xpos"			"0"
-				"ypos"			"0"
-				"wide"			"300"
-				"tall"			"24"
-				"autoResize"	"0"
-				"pinCorner"		"0"
-				"visible"		"1"
-				"enabled"		"1"
-				"PaintBackgroundType" "2"
-				"fgcolor_override"	"235 226 202 255"
-				"bgcolor_override"	"141 178 61 255"
-			}
-		}
-		
-		"MOTD_CloseButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"MOTD_CloseButton"
-			"xpos"			"282"
-			"ypos"			"4"
-			"zpos"			"10"
-			"wide"			"14"
-			"tall"			"14"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"labeltext"		""
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"0"
-
-			"navDown"			"MOTD_URLButton"
-			"navActivate"		"<QuickplayButton"
-
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			"Command"		"motd_hide"
-			
-			"paintbackground"	"0"
-			
-			//"defaultFgColor_override" "235 226 202 255"
-			//"armedFgColor_override" "White"
-			"defaultFgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "White"
-			
-			"image_drawcolor"	"235 226 202 255"
-			"image_armedcolor"	"255 63 0 255"
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"close_button"
-				"scaleImage"	"1"
-			}				
-		}	
-
-		"MOTD_HeaderIcon"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"MOTD_HeaderIcon"
-			"xpos"			"265"
-			"ypos"			"25"
-			"zpos"			"100"
-			"wide"			"25"
-			"tall"			"25"
-			"visible"		"0"
-			"enabled"		"1"
-			"image"			"class_icons/filter_all_motd"
-			"scaleImage"	"1"
-		}
-			
-		"MOTD_TitleLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"MOTD_TitleLabel"
-			"font"			"HudFontSmallBold"
-			"labelText"		"%motdtitle%"
-			"textAlignment"	"west"
-			"xpos"			"10"
-			"ypos"			"25"
-			"wide"			"250"
-			"tall"			"15"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"fgcolor_override"	"White"
-			"wrap"			"1"
-		}
-		
-		"MOTD_Label"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"MOTD_Label"
-			"font"			"HudFontSmall"
-			"labelText"		"%motddate%"
-			"textAlignment"	"north-west"
-			"xpos"			"10"
-			"ypos"			"40"
-			"wide"			"300"
-			"tall"			"15"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"fgcolor_override"	"White"
-		}
-		
-		"MOTD_TitleImageBg"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"MOTD_TitleImageBg"
-			"xpos"			"cs-0.5"
-			"ypos"			"55"
-			"zpos"			"99"
-			"wide"			"250"
-			"tall"			"150"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"item_bg"
-			"scaleImage"	"1"
-			"proportionaltoparent" "1"
-		}
-		
-		"MOTD_TitleImageContainer"
-		{
-			"ControlName"	"EditablePanel"
-			"fieldName"		"MOTD_TitleImageContainer"
-			"xpos"			"cs-0.5"
-			"ypos"			"55"
-			"zpos"			"100"
-			"wide"			"250"
-			"tall"			"150"
-			"visible"		"1"
-			"proportionaltoparent" "1"
-			
-			"MOTD_TitleImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"MOTD_TitleImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"100"
-				"wide"			"250"
-				"tall"			"250"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"class_icons/filter_all"
-				"scaleImage"	"0"
-			}
-		}
-			
-		"MOTD_TextScroller"
-		{
-			"ControlName"	"ScrollableEditablePanel"
-			"fieldName"		"MOTD_TextScroller"
-			"xpos"			"20"
-			"ypos"			"215"
-			"wide"			"280"
-			"tall"			"115"
-			"PaintBackgroundType"	"2"
-			"fgcolor_override"	"117 107 94 255"
-			
-			"MOTD_TextPanel"
-			{
-				"ControlName"	"EditablePanel"
-				"fieldName"		"MOTD_TextPanel"
-				"xpos"			"0"
-				"ypos"			"0"
-				"wide"			"250"
-				"tall"			"300"
-				"visible"		"1"
-				"PaintBackgroundType"	"2"
-			
-				"MOTD_TextLabel"
-				{
-					"ControlName"	"CExLabel"
-					"fieldName"		"MOTD_TextLabel"
-					"font"			"HudFontSmall"
-					"labelText"		"%motdtext%"
-					"textAlignment"	"north-west"
-					"xpos"			"0"
-					"ypos"			"0"
-					"wide"			"250"
-					"tall"			"300"
-					"autoResize"	"0"
-					"pinCorner"		"0"
-					"visible"		"1"
-					"enabled"		"1"
-					"fgcolor_override"	"White"
-					"wrap"			"1"
-				}
-			}
-		}
-		
-		"MOTD_URLButton"
-		{
-			"ControlName"	"CExButton"
-			"fieldName"		"MOTD_URLButton"
-			"xpos"			"75"
-			"ypos"			"rs1.2"
-			"wide"			"150"
-			"tall"			"15"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"labelText"		"#MMenu_MOTD_URL"
-			"textinsetx"	"20"
-			"use_proportional_insets" "1"
-			"font"			"HudFontSmallestBold"
-			"textAlignment"	"center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"command"		"motd_viewurl"
-			"proportionaltoparent" "1"
-
-
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"defaultFgColor_override" "235 226 202 255"
-			"defaultBgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "235 226 202 255"
-		}	
-		
-		"MOTD_PrevButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"MOTD_PrevButton"
-			"xpos"			"12"
-			"ypos"			"336"
-			"zpos"			"1"
-			"wide"			"20"
-			"tall"			"20"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"0"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"labelText"		""
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"Command"		"motd_prev"
-
-
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			"paintbackground" "0"
-			
-			"image_drawcolor"	"235 226 202 255"
-			"image_armedcolor"	"255 255 255 255"
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"1"
-				"wide"			"20"
-				"tall"			"20"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"blog_back"
-				"scaleImage"	"1"
-			}
-		}		
-		
-		"MOTD_NextButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"MOTD_NextButton"
-			"xpos"			"267"
-			"ypos"			"336"
-			"zpos"			"1"
-			"wide"			"20"
-			"tall"			"20"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"0"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"labelText"		""
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"Command"		"motd_next"
-
-
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			"paintbackground" "0"
-			
-			"image_drawcolor"	"235 226 202 255"
-			"image_armedcolor"	"255 255 255 255"
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"1"
-				"wide"			"20"
-				"tall"			"20"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"blog_forward"
-				"scaleImage"	"1"
-			}
-		}
-	}	
-
-	
-	"Notifications_Panel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"Notifications_Panel"
-		"xpos"			"c0"
-		"ypos"			"102"
-		"zpos"			"10"
-		"wide"			"210"
-		"tall"			"80"
-		"visible"		"0"
-		"PaintBackgroundType"	"2"
-		"paintbackground"	"0"
-		"border"		"MainMenuHighlightBorder"
-
-		
-		"Notifications_CloseButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"Notifications_CloseButton"
-			"xpos"			"186"
-			"ypos"			"8"
-			"zpos"			"10"
-			"wide"			"14"
-			"tall"			"14"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"labeltext"		""
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"0"
-
-			"Command"		"noti_hide"
-			"navActivate"	"<QuickplayButton"
-
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "White"
-			
-			"image_drawcolor"	"117 107 94 255"
-			"image_armedcolor"	"255 63 0 255"
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"close_button"
-				"scaleImage"	"1"
-			}				
-		}		
-	
-		"Notifications_TitleLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"Notifications_TitleLabel"
-			"font"			"HudFontSmallBold"
-			"labelText"		"%notititle%"
-			"textAlignment"	"north-west"
-			"xpos"			"12"
-			"ypos"			"8"
-			"wide"			"250"
-			"tall"			"20"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"fgcolor_override"	"White"
-			"wrap"			"1"
-		}
-		
-		"Notifications_Scroller"
-		{
-			"ControlName"	"ScrollableEditablePanel"
-			"fieldName"		"Notifications_Scroller"
-			"xpos"			"8"
-			"ypos"			"25"
-			"wide"			"210"
-			"tall"			"135"
-			"PaintBackgroundType"	"2"
-			"fgcolor_override"	"117 107 94 255"
-			
-			"Notifications_Control"
-			{
-				"ControlName"	"CMainMenuNotificationsControl"
-				"fieldName"		"Notifications_Control"
-				"xpos"			"0"
-				"ypos"			"0"
-				"wide"			"220"
-				"tall"			"135"
-				"visible"		"1"
-			}
-		}
-	}
-	
-	"TrainingButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"TrainingButton"
-		"xpos"			"9999999"
-		"ypos"			"9999999"
-		"zpos"			"11"
-		"wide"			"135"
-		"tall"			"36"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-
-		if_competitive
-		{
-			"ypos"		"216"
-		}
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"125"
-			"tall"			"26"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"25"
-			"use_proportional_insets" "1"
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"west"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"MainMenuButtonDefault"
-			"border_armed"		"MainMenuButtonArmed"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "White"
-			
-			"image_drawcolor"	"117 107 94 255"
-			"image_armedcolor"	"235 226 202 255"
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"6"
-				"ypos"			"6"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}
-
-	"SteamWorkshopButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"SteamWorkshopButton"
-		"xpos"			"6"
-		"ypos"			"422"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"52"
-			"tall"			"52"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"4"
-			"textinsety"	"-4"
-			
-			"use_proportional_insets" "1"
-			"font"			"clocksubtexttiny"
-			"textAlignment"	"South-West"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite3"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "255 255 255 255"
-			"armedFgColor_override" "255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"99999"
-				"ypos"			"99999"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}
-
-	"VRModeButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"VRModeButton"
-		"xpos"			"c-285"
-		"ypos"			"379"
-		"zpos"			"11"
-		"wide"			"270"
-		"tall"			"36"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-		
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"250"
-			"tall"			"26"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"25"
-			"use_proportional_insets" "1"
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"west"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"MainMenuButtonDefault"
-			"border_armed"		"MainMenuButtonArmed"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "White"
-			
-			"image_drawcolor"	"117 107 94 255"
-			"image_armedcolor"	"235 226 202 255"
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"6"
-				"ypos"			"6"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}
-
-
-	"ReplayBrowserButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"ReplayBrowserButton"
-		"xpos"			"6"
-		"ypos"			"370"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"52"
-			"tall"			"52"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"4"
-			"textinsety"	"-4"
-			
-			"use_proportional_insets" "1"
-			"font"			"clocksubtexttiny"
-			"textAlignment"	"South-West"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite3"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "255 255 255 255"
-			"armedFgColor_override" "255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"99999"
-				"ypos"			"99999"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}
-
-	"GeneralStoreButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"GeneralStoreButton"
-		"xpos"			"6"
-		"ypos"			"318"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"52"
-			"tall"			"52"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"4"
-			"textinsety"	"-4"
-			
-			"use_proportional_insets" "1"
-			"font"			"clocksubtexttiny"
-			"textAlignment"	"South-West"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite3"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "255 255 255 255"
-			"armedFgColor_override" "255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"99999"
-				"ypos"			"99999"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}
-	"StoreHasNewItemsImage"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"StoreHasNewItemsImage"
-		"xpos"			"999999"
-		"ypos"			"999999"
-	}
-	
-	"CharacterSetupButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"CharacterSetupButton"
-		"xpos"			"6"
-		"ypos"			"162"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"52"
-			"tall"			"52"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"4"
-			"textinsety"	"-4"
-			
-			"use_proportional_insets" "1"
-			"font"			"clocksubtexttiny"
-			"textAlignment"	"South-West"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite3"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "255 255 255 255"
-			"armedFgColor_override" "255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"99999"
-				"ypos"			"99999"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}
-
-	"StoreBGPanel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"StoreBGPanel"
-		"xpos"			"999999"
-		"ypos"			"999999"
-	}
-	"CustomizeLabel"
-	{
-		"ControlName"	"CExLabel"
-		"fieldName"		"CustomizeLabel"
-		"xpos"			"999999"
-		"ypos"			"999999"
-	}		
-
-	"CreateBGPanel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"CreateBGPanel"
-		"xpos"			"999999"
-		"ypos"			"999999"
-	}
-	"CreateLabel"
-	{
-		"ControlName"	"CExLabel"
-		"fieldName"		"CreateLabel"
-		"xpos"			"999999"
-		"ypos"			"999999"
-	}
-	
-	"VRBGPanel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"VRBGPanel"
-		"xpos"			"c-290"
-		"ypos"			"373"
-		"zpos"			"-1"
-		"wide"			"260"
-		"tall"			"38"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-		"border"		"MainMenuBGBorder"
-
-		if_competitive
-		{
-			"ypos"		"378"
-		}
-	}
-
-	"ShowPromoCodesButton"
-	{
-		"ControlName"	"CExImageButton"
-		"fieldName"		"ShowPromoCodesButton"
-		"xpos"			"c-285"
-		"ypos"			"397"
-		"wide"			"250"
-		"tall"			"20"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"	"0"
-		"font"			"HudFontSmallestBold"
-		"labelText"		"#MMenu_ShowPromoCodes"
-		"textAlignment"	"center"
-		"dulltext"		"0"
-		"brighttext"	"0"
-		"default"		"1"
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"command"		"showpromocodes"
-		
-		"border_default"	"MainMenuButtonDefault"
-		"border_armed"		"MainMenuButtonArmed"
-		"paintbackground"	"0"
-		
-		"defaultFgColor_override" "White"
-		"armedFgColor_override" "235 226 202 255"
-		"depressedFgColor_override" "White"
-	}
-	"FreeTrialPanel"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"FreeTrialPanel"
-		"xpos"			"c-300"
-		"ypos"			"310"
-		"zpos"			"0"
-		"wide"			"250"
-		"tall"			"130"
-		"visible"		"0"
-
-		"Image"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"Image"
-			"xpos"			"0"
-			"ypos"			"0"
-			"zpos"			"0"
-			"wide"			"80"
-			"tall"			"80"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"tf_box"
-			"scaleImage"	"1"
-		}
-
-		"UpgradeLabel1"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"UpgradeLabel"
-			"font"			"HudFontSmallestBold"
-			"labelText"		"#TF_Trial_MainMenu_Upgrade1"
-			"textAlignment"	"north"
-			"xpos"			"80"
-			"ypos"			"5"
-			"wide"			"165"
-			"tall"			"80"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-		}
-		"UpgradeLabel2"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"UpgradeLabel2"
-			"font"			"HudFontSmallBold"
-			"labelText"		"#TF_Trial_MainMenu_Upgrade2"
-			"textAlignment"	"north"
-			"xpos"			"80"
-			"ypos"			"18"
-			"wide"			"165"
-			"tall"			"80"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-			"fgcolor"		"255 155 138 255"
-		}
-		"UpgradeLabel3"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"UpgradeLabel3"
-			"font"			"HudFontSmallestBold"
-			"labelText"		"#TF_Trial_MainMenu_Upgrade3"
-			"textAlignment"	"north"
-			"xpos"			"80"
-			"ypos"			"48"
-			"wide"			"165"
-			"tall"			"80"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-			"fgcolor"		"137 134 127 255"
-		}
-	}
-
-	// command comes from GameMenu.res
-	"QuickplayButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"QuickplayButton"
-		"xpos"			"6"
-		"ypos"			"58"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"52"
-			"tall"			"52"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"4"
-			"textinsety"	"-4"
-			
-			"use_proportional_insets" "1"
-			"font"			"clocksubtexttiny"
-			"textAlignment"	"South-West"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite3"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "255 255 255 255"
-			"armedFgColor_override" "255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"99999"
-				"ypos"			"99999"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}
-
-
-	// command comes from GameMenu.res
-	"ResumeGameButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"ResumeGameButton"
-		"xpos"			"6"
-		"ypos"			"6"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"52"
-			"tall"			"52"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"4"
-			"textinsety"	"-4"
-			
-			"use_proportional_insets" "1"
-			"font"			"clocksubtexttiny"
-			"textAlignment"	"South-West"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite3"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "255 255 255 255"
-			"armedFgColor_override" "255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"99999"
-				"ypos"			"99999"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}
-
-	// command comes from GameMenu.res	
-	"QuickplayChangeButton" //removed
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"QuickplayChangeButton"
-		"xpos"			"9999999"
-		"ypos"			"9999999"
-		"zpos"			"11"
-		"wide"			"270"
-		"tall"			"36"
-		"visible"		"1"
-		"PaintBackgroundType"	"0"
-
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"250"
-			"tall"			"26"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"25"
-			"use_proportional_insets" "1"
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"west"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"MainMenuButtonDefault"
-			"border_armed"		"MainMenuButtonArmed"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "White"
-			
-			"image_drawcolor"	"117 107 94 255"
-			"image_armedcolor"	"235 226 202 255"
-
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"6"
-				"ypos"			"6"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}
-		}
-	}
-
-	// command comes from GameMenu.res
-	"PlayPVEButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"PlayPVEButton"
-		"xpos"			"6"
-		"ypos"			"110"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"52"
-			"tall"			"52"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"4"
-			"textinsety"	"-4"
-			
-			"use_proportional_insets" "1"
-			"font"			"clocksubtexttiny"
-			"textAlignment"	"South-West"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite3"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "255 255 255 255"
-			"armedFgColor_override" "255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"99999"
-				"ypos"			"99999"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}
-	
-	"PlayCompetitiveButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"PlayCompetitiveButton"
-		"xpos"			"c-285"
-		"ypos"			"180"
-		"zpos"			"11"
-		"wide"			"270"
-		"tall"			"36"
-		"visible"		"0"
-		"enabled"		"0"
-		"PaintBackgroundType"	"0"
-
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"250"
-			"tall"			"26"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"0"
-			"enabled"		"0"
-			"tabPosition"	"0"
-			"textinsetx"	"25"
-			"use_proportional_insets" "1"
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"west"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"MainMenuButtonDefault"
-			"border_armed"		"MainMenuButtonArmed"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "White"
-			
-			"image_drawcolor"	"117 107 94 255"
-			"image_armedcolor"	"235 226 202 255"
-
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"6"
-				"ypos"			"6"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}
-		}
-
-		"CompetitiveBetaImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldname"		"CompetitiveBetaImage"
-			"xpos"			"223"
-			"ypos"			"3"
-			"zpos"			"12"
-			"wide"			"20"
-			"tall"			"20"
-			"visible"		"1"
-			"image"			"beta"
-			"scaleImage"	"1"
-		}
-	}
-	
-	// command comes from GameMenu.res
-	"ServerBrowserButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"ServerBrowserButton"
-		"xpos"			"6"
-		"ypos"			"6"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"52"
-			"tall"			"52"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"4"
-			"textinsety"	"-4"
-			
-			"use_proportional_insets" "1"
-			"font"			"clocksubtexttiny"
-			"textAlignment"	"South-West"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite3"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "255 255 255 255"
-			"armedFgColor_override" "255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"99999"
-				"ypos"			"99999"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}
-	
-	// command comes from GameMenu.res
-	"ChangeServerButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"ChangeServerButton"
-		"xpos"			"6"
-		"ypos"			"110"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"52"
-			"tall"			"52"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"4"
-			"textinsety"	"-4"
-			
-			"use_proportional_insets" "1"
-			"font"			"clocksubtexttiny"
-			"textAlignment"	"South-West"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite3"
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "255 255 255 255"
-			"armedFgColor_override" "255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"99999"
-				"ypos"			"99999"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}
-
-	"CallVoteButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"CallVoteButton"
-		"xpos"				"r52"
-		"ypos"				"61"
-		"zpos"				"12"
-		"wide"				"40"
-		"tall"				"40"
-		"visible"		"1"
-
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"40"
-			"tall"			"40"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-
-			"font"			"cbhud26"
-			"textAlignment"	"Center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite2"
-			
-			"defaultFgColor_override" 	"255 255 255 255"
-			"armedFgColor_override" 	"255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"defaultBgColor_override" 	"25 25 25 200"
-			"armedBgColor_override" 	"25 25 25 200"
-			"depressedBgColor_override" "25 25 25 200"			
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"4"
-				"ypos"			"4"
-				"zpos"			"1"
-				"wide"			"0"
-				"tall"			"0"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"glyph_create"
-				"scaleImage"	"1"
-			}				
-		}
-	}
-	"MutePlayersButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"MutePlayersButton"
-		"xpos"				"r52"
-		"ypos"				"102"
-		"zpos"				"12"
-		
-		"wide"				"40"
-		"tall"				"40"
-		"visible"		"1"
-
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"40"
-			"tall"			"40"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-
-			"font"			"cbhud26"
-			"textAlignment"	"Center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite2"
-			
-			"defaultFgColor_override" 	"255 255 255 255"
-			"armedFgColor_override" 	"255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"defaultBgColor_override" 	"25 25 25 200"
-			"armedBgColor_override" 	"25 25 25 200"
-			"depressedBgColor_override" "25 25 25 200"			
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"4"
-				"ypos"			"4"
-				"zpos"			"1"
-				"wide"			"0"
-				"tall"			"0"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"glyph_create"
-				"scaleImage"	"1"
-			}				
-		}
-	}
-
-	"RequestCoachButton"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"RequestCoachButton"
-		"xpos"				"r52"
-		"ypos"				"143"
-		"zpos"				"12"
-		
-		"wide"				"40"
-		"tall"				"40"
-		"visible"		"1"
-
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"			"40"
-			"tall"			"40"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			
-			"font"			"cbhud26"
-			"textAlignment"	"Center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"CBBorderWhite2"
-			
-			"defaultFgColor_override" 	"0 0 0 0"
-			"armedFgColor_override" 	"0 0 0 0"
-			"depressedFgColor_override" "0 0 0 0"
-			
-			"defaultBgColor_override" 	"25 25 25 200"
-			"armedBgColor_override" 	"25 25 25 200"
-			"depressedBgColor_override" "25 25 25 200"			
-			
-			"image_drawcolor"	"255 255 255 255"
-			"image_armedcolor"	"255 255 255 255"
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"8"
-				"ypos"			"8"
-				"zpos"			"1"
-				"wide"			"24"
-				"tall"			"24"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"glyph_create"
-				"scaleImage"	"1"
-			}				
-		}
-	}
-	
-	"BackgroundFooter"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"BackgroundFooter"
-		"xpos"			"999999"
-		"ypos"			"999999"
-	}				
-	"FooterLine"
-	{
-		"ControlName"	"ImagePanel"
-		"fieldName"		"FooterLine"
-		"xpos"			"999999"
-		"ypos"			"999999"
-	}	
-
-	"OpenConsole"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"OpenConsole"
-		"xpos"			"r179"
-		"ypos"			"r29"
-		"zpos"			"11"
-		"wide"			"25"
-		"tall"			"25"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"-10"
-			"ypos"			"-17"
-			"wide"			"45"
-			"tall"			"45"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"25"
-			"use_proportional_insets" "1"
-			"font"			"SymbolS"
-			"textAlignment"	"Center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-		
-			
-			"fgcolor"					"255 255 255 255"
-			"defaultFgColor_override" 		"255 255 255 255"
-			"armedFgColor_override" 		"11 150 224 255"
-			"depressedFgColor_override" 	"0 0 0 255"
-			"selectedFgColor_override" 		"0 0 0 255"
-			
-			"bgcolor"						"0 0 0 0"
-			"defaultBgColor_override" 		"0 0 0 0"
-			"armedBgColor_override" 		"0 0 0 0"
-			"depressedBgColor_override" 	"0 0 0 0"
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"border_default"			"NoBorder"
-			"border_armed"				"NoBorder"		
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"2"
-				"ypos"			"2"
-				"zpos"			"1"
-				"wide"			"0"
-				"tall"			"0"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}		
-	
-	"ToggleScoreboard"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldName"		"ToggleScoreboard"
-		"xpos"			"r155"
-		"ypos"			"r29"
-		"zpos"			"11"
-		"wide"			"25"
-		"tall"			"25"
-		"visible"		"1"
-		"PaintBackgroundType"	"2"
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"-10"
-			"ypos"			"-17"
-			"wide"			"45"
-			"tall"			"45"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"textinsetx"	"25"
-			"use_proportional_insets" "1"
-			"font"			"SymbolS"
-			"textAlignment"	"Center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-		
-			
-			"fgcolor"					"255 255 255 255"
-			"defaultFgColor_override" 		"255 255 255 255"
-			"armedFgColor_override" 		"11 150 224 255"
-			"depressedFgColor_override" 	"0 0 0 255"
-			"selectedFgColor_override" 		"0 0 0 255"
-			
-			"bgcolor"						"0 0 0 0"
-			"defaultBgColor_override" 		"0 0 0 0"
-			"armedBgColor_override" 		"0 0 0 0"
-			"depressedBgColor_override" 	"0 0 0 0"
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-			
-			"border_default"			"NoBorder"
-			"border_armed"				"NoBorder"		
-			
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"2"
-				"ypos"			"2"
-				"zpos"			"1"
-				"wide"			"0"
-				"tall"			"0"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
-			}		
-		}
-	}	
-	
-	"NewUserForumsButton"
-	{
-		"ControlName"	"CExImageButton"
-		"fieldName"		"NewUserForumsButton"
-		"xpos"			"r129"
-		"ypos"			"r29"
-		"zpos"			"2"
-		"wide"			"24"
-		"tall"			"24"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"	"0"
-		"labelText"		""
-		"font"			"HudFontSmallBold"
-		"textAlignment"	"center"
-		"dulltext"		"0"
-		"brighttext"	"0"
-		"default"		"1"
-		"paintbackground""0"
-		"Command"		"view_newuser_forums"
-
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"PaintBackgroundType" "0"
-		"border_default"	""
-		
-		"image_drawcolor"	"255 255 255 255"
-		"image_armedcolor"	"11 150 224 255"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"5"
-			"ypos"			"5"
-			"zpos"			"1"
-			"wide"			"18"
+			"name"			"Garm3nFont"
 			"tall"			"18"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"glyph_tutorial"
-			"scaleImage"	"1"
-		}				
-	}		
-	
-	"AchievementsButton"
-	{
-		"ControlName"	"CExImageButton"
-		"fieldName"		"AchievementsButton"
-		"xpos"			"r104"
-		"ypos"			"r29"
-		"zpos"			"3"
-		"wide"			"24"
-		"tall"			"24"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"	"0"
-		"labelText"		""
-		"font"			"HudFontSmallBold"
-		"textAlignment"	"center"
-		"dulltext"		"0"
-		"brighttext"	"0"
-		"default"		"1"
-		"paintbackground""0"
-		"Command"		"OpenAchievementsDialog"
-
-		"navUp"			"VRModeButton"
-		"navLeft"		"NewUserForumsButton"
-		"navRight"		"CommentaryButton"
-
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"border_default"	""
-		
-		"image_drawcolor"	"255 255 255 255"
-		"image_armedcolor"	"11 150 224 255"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"5"
-			"ypos"			"5"
-			"zpos"			"1"
-			"wide"			"15"
-			"tall"			"15"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"glyph_achievements"
-			"scaleImage"	"1"
-		}				
-	}		
-	
-	"CommentaryButton"
-	{
-		"ControlName"	"CExImageButton"
-		"fieldName"		"CommentaryButton"
-		"xpos"			"r79"
-		"ypos"			"r29"
-		"zpos"			"4"
-		"wide"			"25"
-		"tall"			"25"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"	"0"
-		"labelText"		""
-		"font"			"HudFontSmallBold"
-		"textAlignment"	"center"
-		"dulltext"		"0"
-		"brighttext"	"0"
-		"default"		"1"
-		"paintbackground""0"
-		"Command"		"OpenLoadSingleplayerCommentaryDialog"
-
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"border_default"	""
-		
-		"image_drawcolor"	"255 255 255 255"
-		"image_armedcolor"	"11 150 224 255"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"5"
-			"ypos"			"5"
-			"zpos"			"1"
-			"wide"			"15"
-			"tall"			"15"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"glyph_forums"
-			"scaleImage"	"1"
-		}				
-	}		
-	
-	"CoachPlayersButton"
-	{
-		"ControlName"	"CExImageButton"
-		"fieldName"		"CoachPlayersButton"
-		"xpos"			"r54"
-		"ypos"			"r29"
-		"zpos"			"5"
-		"wide"			"24"
-		"tall"			"24"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"	"0"
-		"labelText"		""
-		"font"			"HudFontSmallBold"
-		"textAlignment"	"center"
-		"dulltext"		"0"
-		"brighttext"	"0"
-		"default"		"1"
-		"paintbackground""0"
-		"Command"		"engine cl_coach_toggle"
-
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"border_default"	""
-		
-		"image_drawcolor"	"255 255 255 255"
-		"image_armedcolor"	"11 150 224 255"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"5"
-			"ypos"			"5"
-			"zpos"			"1"
-			"wide"			"15"
-			"tall"			"15"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"glyph_commentary"
-			"scaleImage"	"1"
-		}				
-	}		
-	
-	"ReportBugButton"
-	{
-		"ControlName"	"CExImageButton"
-		"fieldName"		"ReportBugButton"
-		"xpos"			"r29"
-		"ypos"			"r29"
-		"zpos"			"1"
-		"wide"			"24"
-		"tall"			"24"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"	"0"
-		"labelText"		""
-		"font"			"HudFontSmallBold"
-		"textAlignment"	"center"
-		"dulltext"		"0"
-		"brighttext"	"0"
-		"default"		"1"
-		"paintbackground""0"
-		"Command"		"engine bug"
-
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		"border_default"	""
-		
-		"image_drawcolor"	"255 255 255 255"
-		"image_armedcolor"	"11 150 224 255"
-		
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"5"
-			"ypos"			"5"
-			"zpos"			"1"
-			"wide"			"15"
-			"tall"			"15"
-			"visible"		"1"
-			"enabled"		"1"
-			"image"			"glyph_bug"
-			"scaleImage"	"1"
-		}				
-	}	
-	
-	"TF2SettingsButton" //adv. options
-	{
-		"ControlName"	"CExImageButton"
-		"fieldName"		"TF2SettingsButton"
-		"xpos"			"6"
-		"ypos"			"266"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"	"0"
-		"labelText"		"Adv. Options"
-		"font"			"clocksubtexttiny"
-		"textAlignment"	"South-West"
-		
-		"textinsetx"	"4"
-		"textinsety"	"-4"
-		
-		"dulltext"		"0"
-		"brighttext"	"0"
-		"default"		"1"
-		"Command"		"opentf2options"
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		
-		"border_default"	"NoBorder"
-		"border_armed"		"CBBorderWhite3"
-		"paintbackground"	"0"		
-		
-		"defaultFgColor_override" "255 255 255 255"
-		"armedFgColor_override" "255 255 255 255"
-		"depressedFgColor_override" "255 255 255 255"		
-
-		
-		"image_drawcolor"	"0 0 0 0"
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"999999"
-			"ypos"			"999999"
-			"zpos"			"1"
-			"wide"			"14"
-			"tall"			"14"
-			"visible"		"1"
-			"enabled"		"1"
-			"scaleImage"	"1"
-			"image"			"glyph_options"
-			"scaleImage"	"1"
-		}				
-	}		
-	
-	"SettingsButton"
-	{
-		"ControlName"	"CExImageButton"
-		"fieldName"		"SettingsButton"
-		"xpos"			"6"
-		"ypos"			"215"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"	"0"
-		"labelText"		"Options"
-		"font"			"clocksubtexttiny"
-		"textAlignment"	"South-West"
-		
-		"textinsetx"	"4"
-		"textinsety"	"-4"
-
-		"dulltext"		"0"
-		"brighttext"	"0"
-		"default"		"1"
-		"Command"		"OpenOptionsDialog"
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		
-		"border_default"	"NoBorder"
-		"border_armed"		"CBBorderWhite3"
-		"paintbackground"	"0"		
-		
-		"defaultFgColor_override" "255 255 255 255"
-		"armedFgColor_override" "255 255 255 255"
-		"depressedFgColor_override" "255 255 255 255"		
-
-		
-		"image_drawcolor"	"0 0 0 0"
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"999999"
-			"ypos"			"999999"
-			"zpos"			"1"
-			"wide"			"14"
-			"tall"			"14"
-			"visible"		"1"
-			"enabled"		"1"
-			"scaleImage"	"1"
-			"image"			"glyph_options"
-		}			
-	}
-	
-	"QuitButton"
-	{
-		"ControlName"	"CExImageButton"
-		"fieldName"		"QuitButton"
-		"xpos"			"r58"
-		"ypos"			"6"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"	"0"
-		
-		"labelText"		"Quit"
-		"font"			"clocksubtexttiny"
-		"textAlignment"	"South-West"
-		
-		"textinsetx"	"4"
-		"textinsety"	"-4"
-		
-		"dulltext"		"0"
-		"brighttext"	"0"
-		"default"		"1"
-		"Command"		"engine replay_confirmquit"
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		
-		"border_default"	"NoBorder"
-		"border_armed"		"CBBorderWhite3"
-		"paintbackground"	"0"		
-		
-		"defaultFgColor_override" "255 255 255 255"
-		"armedFgColor_override" "255 255 255 255"
-		"depressedFgColor_override" "255 255 255 255"		
-		
-		"image_drawcolor"	"0 0 0 0"
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"16"
-			"ypos"			"6"
-			"zpos"			"1"
-			"wide"			"0"
-			"tall"			"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"scaleImage"	"1"
-			"image"			"glyph_quit"
-		}				
-	}			
-	
-	"DisconnectButton"
-	{
-		"ControlName"	"CExImageButton"
-		"fieldName"		"DisconnectButton"
-		"xpos"			"r58"
-		"ypos"			"6"
-		"zpos"			"11"
-		"wide"			"52"
-		"tall"			"52"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"	"0"
-		
-		"labelText"		"Disconnect"
-		"font"			"clocksubtexttiny"
-		"textAlignment"	"South-West"
-		
-		"textinsetx"	"4"
-		"textinsety"	"-4"
-		
-		"dulltext"		"0"
-		"brighttext"	"0"
-		"default"		"1"
-		"Command"		"engine disconnect"
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-
-		"border_default"	"NoBorder"
-		"border_armed"		"CBBorderWhite3"
-		"paintbackground"	"0"		
-		
-		"defaultFgColor_override" "255 255 255 255"
-		"armedFgColor_override" "255 255 255 255"
-		"depressedFgColor_override" "255 255 255 255"		
-		
-		"image_drawcolor"	"0 0 0 0"
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"16"
-			"ypos"			"6"
-			"zpos"			"1"
-			"wide"			"0"
-			"tall"			"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"scaleImage"	"1"
-			"image"			"glyph_quit"
-		}				
-	}			
-	
-	"BackToReplaysButton"
-	{
-		"ControlName"	"CExImageButton"
-		"fieldName"		"BackToReplaysButton"
-		"xpos"			"c-300"
-		"ypos"			"437"
-		"zpos"			"1"
-		"wide"			"170"
-		"tall"			"25"
-		"autoResize"	"0"
-		"pinCorner"		"3"
-		"visible"		"0"
-		"enabled"		"1"
-		"tabPosition"	"0"
-		"labelText"		"#GameUI_GameMenu_ExitReplay"
-		"font"			"HudFontSmallBold"
-		"textAlignment"	"west"
-		"textinsetx"	"35"
-		"use_proportional_insets" "1"
-		"dulltext"		"0"
-		"brighttext"	"0"
-		"default"		"1"
-		"Command"		"exitreplayeditor"
-		"sound_depressed"	"UI/buttonclick.wav"
-		"sound_released"	"UI/buttonclickrelease.wav"
-		
-		"image_drawcolor"	"235 226 202 255"
-		"SubImage"
-		{
-			"ControlName"	"ImagePanel"
-			"fieldName"		"SubImage"
-			"xpos"			"16"
-			"ypos"			"6"
-			"zpos"			"1"
-			"wide"			"14"
-			"tall"			"14"
-			"visible"		"1"
-			"enabled"		"1"
-			"scaleImage"	"1"
-			"image"			"glyph_quit"
-		}				
-	}			
-	
-	"TutorialHighlight"
-	{
-		"ControlName"	"CExplanationPopup"
-		"fieldName"		"TutorialHighlight"
-		"xpos"			"c-285"
-		"ypos"			"195"
-		"zpos"			"100"
-		"wide"			"250"
-		"tall"			"120"
-		"visible"		"0"
-		"PaintBackgroundType"	"2"
-		"paintbackground" "0"
-		"border"		"MainMenuHighlightBorder"
-		
-		"start_x"		"c-85"
-		"start_y"		"185"
-		"start_wide"	"1"
-		"start_tall"	"1"
-		"end_x"			"c20"
-		"end_y"			"120"
-		"end_wide"		"250"
-		"end_tall"		"120"
-		"callout_inparents_x"	"c-40"
-		"callout_inparents_y"	"195"
-		
-		"TitleLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TitleLabel"
-			"font"			"HudFontSmallBold"
-			"labelText"		"%highlighttext%"
-			"textAlignment"	"center"
-			"xpos"			"20"
-			"ypos"			"10"
-			"wide"			"210"
-			"tall"			"60"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-			"fgcolor_override" "White"
+			"weight"		"0"
+			"antialias"		"1"
+			}
 		}
-		
-		"TextLabel"
+		"KonrWings24"
 		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TextLabel"
-			"font"			"HudFontSmall"
-			"labelText"		"#MMenu_TutorialHighlight_Text"
-			"textAlignment"	"south-west"
-			"xpos"			"20"
-			"ypos"			"60"
-			"wide"			"210"
-			"tall"			"20"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"fgcolor_override" "White"
-		}
-		
-		"TutorialHighlightButton"
-		{
-			"ControlName"	"EditablePanel"
-			"fieldname"		"TutorialHighlightButton"
-			"xpos"			"10"
-			"ypos"			"85"
-			"wide"			"230"
-			"tall"			"26"
-			"visible"		"1"
-			
-			"SubButton"
+			"1"
 			{
-				"ControlName"	"CExImageButton"
-				"fieldName"		"SubButton"
-				"xpos"			"0"
-				"ypos"			"0"
-				"wide"			"230"
-				"tall"			"26"
-				"autoResize"	"0"
-				"pinCorner"		"3"
-				"visible"		"1"
-				"enabled"		"1"
-				"tabPosition"	"0"
-				"labeltext"		"#MMenu_TutorialHighlight_Button"
-				"font"			"HudFontSmallBold"
-				"textAlignment"	"center"
-				"dulltext"		"0"
-				"brighttext"	"0"
-				"default"		"1"
-				"sound_depressed"	"UI/buttonclick.wav"
-				"sound_released"	"UI/buttonclickrelease.wav"
-				"Command"		"tutorial"
-				
-				"border_default"	"MainMenuButtonDefault"
-				"border_armed"		"MainMenuButtonArmed"
-				"paintbackground"	"0"
-				
-				"defaultFgColor_override" "White"
-				"armedFgColor_override" "235 226 202 255"
-				"depressedFgColor_override" "White"
-				
-				"image_drawcolor"	"117 107 94 255"
-				"image_armedcolor"	"235 226 202 255"
-				"SubImage"
-				{
-					"ControlName"	"ImagePanel"
-					"fieldName"		"SubImage"
-					"xpos"			"6"
-					"ypos"			"6"
-					"zpos"			"1"
-					"wide"			"14"
-					"tall"			"14"
-					"visible"		"1"
-					"enabled"		"1"
-					"scaleImage"	"1"
-				}				
-			}		
+			"name"			"Garm3nFont"
+			"tall"			"24"
+			"weight"		"0"
+			"antialias"		"1"
+			}
 		}
-		
-		"CloseButton"
+		"KonrWingsOutline24"
 		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"CloseButton"
-			"xpos"			"230"
-			"ypos"			"5"
-			"zpos"			"10"
-			"wide"			"14"
-			"tall"			"14"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"labeltext"		""
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			"Command"		"close"
-			
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "White"
-			
-			"image_drawcolor"	"117 107 94 255"
-			"image_armedcolor"	"255 63 0 255"
-			"SubImage"
+			"1"
 			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"close_button"
-				"scaleImage"	"1"
-			}				
+			"name"			"Garm3nFont"
+			"tall"			"24"
+			"weight"		"0"
+			"antialias"		"1"
+			"outline"		"1"
+			}
+		}
+		"KonrWings32"
+		{
+			"1"
+			{
+			"name"			"Garm3nFont"
+			"tall"			"32"
+			"weight"		"0"
+			"antialias"		"1"
+			}
+		}
+		"KonrWings40"
+		{
+			"1"
+			{
+			"name"			"Garm3nFont"
+			"tall"			"40"
+			"weight"		"0"
+			"antialias"		"1"
+			}
+		}
+		"M0rexhairCross"
+		{
+			"1"
+			{
+				"name"		  "Courier"
+				"tall"		  "22"
+				"weight"	  "0"
+				"range"     "0x0000 0x017F"
+				"outline"   "1"
+			}
+		}
+		"M0rexhairCircle"
+		{
+			"1"
+			{
+				"name"		  "taller evolution"
+				"tall"		  "36"
+				"weight"	  "0"
+				"antialias"	"1"
+			}
+		}
+		"M0rexhairDot"
+		{
+			"1"
+			{
+				"name"		  "Astro 867"
+				"tall"		  "19"
+				"weight"	  "0"
+				"additive"  "0"
+				"outline"   "1"
+			}
 		}		
-	}	
-	
-	"PracticeHighlight"
-	{
-		"ControlName"	"CExplanationPopup"
-		"fieldName"		"PracticeHighlight"
-		"zpos"			"100"
-		"wide"			"250"
-		"tall"			"120"
-		"visible"		"0"
-		"PaintBackgroundType"	"2"
-		"paintbackground" "0"
-		"border"		"MainMenuHighlightBorder"
-		
-		"start_x"		"c-85"
-		"start_y"		"185"
-		"start_wide"	"1"
-		"start_tall"	"1"
-		"end_x"			"c20"
-		"end_y"			"120"
-		"end_wide"		"250"
-		"end_tall"		"120"
-		"callout_inparents_x"	"c-40"
-		"callout_inparents_y"	"195"
-		
-		"TitleLabel"
+		"Default"
 		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TitleLabel"
-			"font"			"HudFontSmallBold"
-			"labelText"		"#MMenu_PracticeHighlight_Title"
-			"textAlignment"	"center"
-			"xpos"			"20"
-			"ypos"			"10"
-			"wide"			"210"
-			"tall"			"50"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-			"fgcolor_override" "White"
-		}
-		
-		"TextLabel"
+      "1"
+      {
+				"name"		  "Surface-Medium"
+        "tall"      "14"
+        "antialias" "1"
+				"yres"	    "480 700"
+			}
+      "2"
+      {
+				"name"		  "Surface-Medium"
+        "tall"      "18"
+        "antialias" "1"
+				"yres"	    "701 899"
+			}
+      "3"
+      {
+				"name"		  "Surface-Medium"
+        "tall"      "22"
+        "antialias" "1"
+				"yres"	    "900 1000"
+			}
+      "4"
+      {
+				"name"		  "Surface-Medium"
+        "tall"      "24"
+        "antialias" "1"
+				"yres"	    "1001 10000"
+			}
+     }
+		"DefaultOutline"
 		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TextLabel"
-			"font"			"HudFontSmall"
-			"labelText"		"#MMenu_PracticeHighlight_Text"
-			"textAlignment"	"south-west"
-			"xpos"			"20"
-			"ypos"			"50"
-			"wide"			"210"
-			"tall"			"30"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"fgcolor_override" "White"
-		}
-		
-		"PracticeHighlightButton"
+      "1"
+      {
+				"name"		  "Surface-Medium"
+        "tall"      "16"
+        "antialias" "1"
+				"yres"	    "480 700"
+				"outline"   "1"
+			}
+      "2"
+      {
+				"name"		  "Surface-Medium"
+        "tall"      "20"
+        "antialias" "1"
+				"yres"	    "701 899"
+				"outline"   "1"
+			}
+      "3"
+      {
+				"name"		  "Surface-Medium"
+        "tall"      "24"
+        "antialias" "1"
+				"yres"	    "900 1000"
+				"outline"   "1"
+			}
+      "4"
+      {
+				"name"		  "Surface-Medium"
+        "tall"      "26"
+        "antialias" "1"
+				"yres"    	"1001 10000"
+				"outline"   "1"
+			}
+     }
+        "Killfeed"
+        {
+                        "1"
+      {
+           "name"          "Surface-Medium"
+           "tall"          "10"
+           "weight"        "900"
+           "range"         "0x0000 0x017F" //
+           "outline"       "1"
+                        }
+                }		
+		"DefaultNumber"
 		{
-			"ControlName"	"EditablePanel"
-			"fieldname"		"PracticeHighlightButton"
-			"xpos"			"10"
-			"ypos"			"85"
-			"wide"			"230"
-			"tall"			"26"
-			"visible"		"1"
-			
-			"SubButton"
+      "1"
+      {
+				"name"		  "Surface-Medium"
+        "tall"      "16"
+        "antialias" "1"
+				"yres"	    "480 700"
+			}
+      "2"
+      {
+				"name"		  "Surface-Medium"
+        "tall"      "20"
+        "antialias" "1"
+				"yres"	    "701 899"
+			}
+      "3"
+      {
+				"name"		  "Surface-Medium"
+        "tall"      "24"
+        "antialias" "1"
+				"yres"	    "900 1000"
+			}
+      "4"
+      {
+				"name"		  "Surface-Medium"
+        "tall"      "26"
+        "antialias" "1"
+				"yres"	    "1001 10000"
+			}
+     }
+		"DefaultUnderline"
+		{
+			"1"
 			{
-				"ControlName"	"CExImageButton"
-				"fieldName"		"SubButton"
-				"xpos"			"0"
-				"ypos"			"0"
-				"wide"			"230"
-				"tall"			"26"
-				"autoResize"	"0"
-				"pinCorner"		"3"
-				"visible"		"1"
-				"enabled"		"1"
-				"tabPosition"	"0"
-				"labeltext"		"#MMenu_PracticeHighlight_Button"
-				"font"			"HudFontSmallBold"
-				"textAlignment"	"center"
-				"dulltext"		"0"
-				"brighttext"	"0"
-				"default"		"1"
-				"sound_depressed"	"UI/buttonclick.wav"
-				"sound_released"	"UI/buttonclickrelease.wav"
-				"Command"		"offlinepractice"
-				
-				"border_default"	"MainMenuButtonDefault"
-				"border_armed"		"MainMenuButtonArmed"
-				"paintbackground"	"0"
-				
-				"defaultFgColor_override" "White"
-				"armedFgColor_override" "235 226 202 255"
-				"depressedFgColor_override" "White"
-				
-				"image_drawcolor"	"117 107 94 255"
-				"image_armedcolor"	"235 226 202 255"
-				"SubImage"
-				{
-					"ControlName"	"ImagePanel"
-					"fieldName"		"SubImage"
-					"xpos"			"6"
-					"ypos"			"6"
-					"zpos"			"1"
-					"wide"			"14"
-					"tall"			"14"
-					"visible"		"1"
-					"enabled"		"1"
-					"scaleImage"	"1"
-				}				
-			}		
-		}
-		
-		"CloseButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"CloseButton"
-			"xpos"			"230"
-			"ypos"			"5"
-			"zpos"			"10"
-			"wide"			"14"
-			"tall"			"14"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"labeltext"		""
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			"Command"		"close"
-			
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "White"
-			
-			"image_drawcolor"	"117 107 94 255"
-			"image_armedcolor"	"255 63 0 255"
-			"SubImage"
+				"name"		"Tahoma"
+				"tall"		"12"
+				"weight"	"500"
+				"underline" "1"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+			}
+			"2"
 			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"close_button"
-				"scaleImage"	"1"
-			}				
-		}		
-	}	
-	
-	"NewUserForumHighlight"
-	{
-		"ControlName"	"CExplanationPopup"
-		"fieldName"		"NewUserForumHighlight"
-		"xpos"			"c-55"
-		"ypos"			"280"
-		"zpos"			"100"
-		"wide"			"250"
-		"tall"			"120"
-		"visible"		"0"
-		"PaintBackgroundType"	"2"
-		"paintbackground" "0"
-		"border"		"MainMenuHighlightBorder"
-		
-		"start_x"		"c-112"
-		"start_y"		"437"
-		"start_wide"	"1"
-		"start_tall"	"1"
-		"end_x"			"c-205"
-		"end_y"			"280"
-		"end_wide"		"250"
-		"end_tall"		"120"
-		"callout_inparents_x"	"c-116"
-		"callout_inparents_y"	"437"
-		
-		"TitleLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TitleLabel"
-			"font"			"HudFontSmallBold"
-			"labelText"		"#MMenu_NewUserForumHighlight_Title"
-			"textAlignment"	"north-west"
-			"xpos"			"10"
-			"ypos"			"10"
-			"wide"			"210"
-			"tall"			"20"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-			"fgcolor_override" "White"
-		}
-		
-		"TextLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TextLabel"
-			"font"			"HudFontSmall"
-			"labelText"		"#MMenu_NewUserForumHighlight_Text"
-			"textAlignment"	"north-west"
-			"xpos"			"20"
-			"ypos"			"30"
-			"wide"			"210"
-			"tall"			"90"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-			"fgcolor_override" "White"
-		}
-		
-		"CloseButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"CloseButton"
-			"xpos"			"230"
-			"ypos"			"5"
-			"zpos"			"10"
-			"wide"			"14"
-			"tall"			"14"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"labeltext"		""
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			"Command"		"close"
-			
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "White"
-			
-			"image_drawcolor"	"117 107 94 255"
-			"image_armedcolor"	"255 63 0 255"
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"close_button"
-				"scaleImage"	"1"
-			}				
-		}		
-	}	
-	
-	"OptionsHighlightPanel"
-	{
-		"ControlName"	"CExplanationPopup"
-		"fieldName"		"OptionsHighlightPanel"
-		"xpos"			"c-55"
-		"ypos"			"280"
-		"zpos"			"100"
-		"wide"			"250"
-		"tall"			"120"
-		"visible"		"0"
-		"PaintBackgroundType"	"2"
-		"paintbackground" "0"
-		"border"		"MainMenuHighlightBorder"
-		
-		"start_x"		"c238"
-		"start_y"		"437"
-		"start_wide"	"1"
-		"start_tall"	"1"
-		"end_x"			"c55"
-		"end_y"			"280"
-		"end_wide"		"250"
-		"end_tall"		"120"
-		"callout_inparents_x"	"c240"
-		"callout_inparents_y"	"437"
-		
-		"TitleLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TitleLabel"
-			"font"			"HudFontSmallBold"
-			"labelText"		"#MMenu_OptionsHighlightPanel_Title"
-			"textAlignment"	"north-west"
-			"xpos"			"10"
-			"ypos"			"10"
-			"wide"			"210"
-			"tall"			"20"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-			"fgcolor_override" "White"
-		}
-		
-		"TextLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TextLabel"
-			"font"			"HudFontSmall"
-			"labelText"		"#MMenu_OptionsHighlightPanel_Text"
-			"textAlignment"	"north-west"
-			"xpos"			"20"
-			"ypos"			"30"
-			"wide"			"210"
-			"tall"			"90"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-			"fgcolor_override" "White"
-		}
-		
-		"CloseButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"CloseButton"
-			"xpos"			"230"
-			"ypos"			"5"
-			"zpos"			"10"
-			"wide"			"14"
-			"tall"			"14"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"labeltext"		""
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			"Command"		"close"
-			
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "White"
-			
-			"image_drawcolor"	"117 107 94 255"
-			"image_armedcolor"	"255 63 0 255"
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"close_button"
-				"scaleImage"	"1"
-			}				
-		}		
-	}
-	
-	"LoadoutHighlightPanel"
-	{
-		"ControlName"	"CExplanationPopup"
-		"fieldName"		"LoadoutHighlightPanel"
-		"xpos"			"c-55"
-		"ypos"			"280"
-		"zpos"			"100"
-		"wide"			"250"
-		"tall"			"120"
-		"visible"		"0"
-		"PaintBackgroundType"	"2"
-		"paintbackground" "0"
-		"border"		"MainMenuHighlightBorder"
-		
-		"start_x"		"c-190"
-		"start_y"		"267"
-		"start_wide"	"1"
-		"start_tall"	"1"
-		"end_x"			"c-125"
-		"end_y"			"180"
-		"end_wide"		"250"
-		"end_tall"		"220"
-		"callout_inparents_x"	"c-163"
-		"callout_inparents_y"	"267"
-		
-		"TitleLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TitleLabel"
-			"font"			"HudFontSmallBold"
-			"labelText"		"#MMenu_LoadoutHighlightPanel_Title"
-			"textAlignment"	"north-west"
-			"xpos"			"10"
-			"ypos"			"10"
-			"wide"			"210"
-			"tall"			"20"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-			"fgcolor_override" "White"
-		}
-		
-		"TextLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TextLabel"
-			"font"			"HudFontSmall"
-			"labelText"		"#MMenu_LoadoutHighlightPanel_Text"
-			"textAlignment"	"north-west"
-			"xpos"			"20"
-			"ypos"			"30"
-			"wide"			"210"
-			"tall"			"190"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-			"fgcolor_override" "White"
-		}
-		
-		"CloseButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"CloseButton"
-			"xpos"			"230"
-			"ypos"			"5"
-			"zpos"			"10"
-			"wide"			"14"
-			"tall"			"14"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"labeltext"		""
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			"Command"		"close"
-			
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "White"
-			
-			"image_drawcolor"	"117 107 94 255"
-			"image_armedcolor"	"255 63 0 255"
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"close_button"
-				"scaleImage"	"1"
-			}				
-		}		
-	}
-
-	"StoreHighlightPanel"
-	{
-		"ControlName"	"CExplanationPopup"
-		"fieldName"		"StoreHighlightPanel"
-		"xpos"			"c0"
-		"ypos"			"300"
-		"zpos"			"100"
-		"wide"			"250"
-		"tall"			"60"
-		"visible"		"0"
-		"PaintBackgroundType"	"2"
-		"paintbackground" "0"
-		"border"		"MainMenuHighlightBorder"
-		
-		"start_x"		"c20"
-		"start_y"		"285"
-		"start_wide"	"250"
-		"start_tall"	"125"
-		"end_x"			"c20"
-		"end_y"			"285"
-		"end_wide"		"250"
-		"end_tall"		"125"
-		"callout_inparents_x"	"c-40"
-		"callout_inparents_y"	"267"
-		
-		"TitleLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TitleLabel"
-			"font"			"HudFontSmallBold"
-			"labelText"		"#MMenu_StoreHighlightPanel_Title"
-			"textAlignment"	"north-west"
-			"xpos"			"10"
-			"ypos"			"10"
-			"wide"			"210"
-			"tall"			"20"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-			"fgcolor_override" "White"
-		}
-		
-		"TextLabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"TextLabel"
-			"font"			"HudFontSmall"
-			"labelText"		"%highlighttext%"
-			"textAlignment"	"north-west"
-			"xpos"			"20"
-			"ypos"			"30"
-			"wide"			"210"
-			"tall"			"190"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"wrap"			"1"
-			"fgcolor_override" "White"
-		}
-		
-		"CloseButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"CloseButton"
-			"xpos"			"230"
-			"ypos"			"5"
-			"zpos"			"10"
-			"wide"			"14"
-			"tall"			"14"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-			"labeltext"		""
-			"font"			"HudFontSmallBold"
-			"textAlignment"	"center"
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			"Command"		"close"
-			
-			"paintbackground"	"0"
-			
-			"defaultFgColor_override" "White"
-			"armedFgColor_override" "235 226 202 255"
-			"depressedFgColor_override" "White"
-			
-			"image_drawcolor"	"117 107 94 255"
-			"image_armedcolor"	"255 63 0 255"
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"0"
-				"ypos"			"0"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"image"			"close_button"
-				"scaleImage"	"1"
-			}				
-		}		
-	}
-
-//place special background buttons here
-
-	"MenuButtonRight" //Quit button, only at menu
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"MenuButtonRight"
-		
-		"xpos"				"r57"
-		"ypos"				"7"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		"visible"		"1"
-		"PaintBackgroundType"	"0"
-
-
-		"SubButton"
-		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"				"50"
-			"tall"				"50"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-
-			"font"			"cbhud30"
-			"textAlignment"	"Center"
-			
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"NoBorder"
-			
-			"defaultFgColor_override" 	"255 255 255 255"
-			"armedFgColor_override" 	"255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"defaultBgColor_override" 	"255 63 0 255"
-			"armedBgColor_override" 	"255 63 0 255"
-			"depressedBgColor_override" "255 63 0 255"			
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-
-			"SubImage"
-			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"6"
-				"ypos"			"6"
-				"zpos"			"1"
-				"wide"			"0"
-				"tall"			"0"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
+				"name"		"Arial"
+				"tall"		"11"
+				"range" 		"0x0000 0x00FF"
+				"weight"		"800"
 			}
 		}
-	}
-	
-	"MenuButtonRightAlt" //Disconnect button, only in-game
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"MenuButtonRightAlt"
-		
-		"xpos"				"r57"
-		"ypos"				"7"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		"visible"		"1"
-		"PaintBackgroundType"	"0"
-
-
-		"SubButton"
+		"DefaultSmall"
 		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"				"50"
-			"tall"				"50"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-
-			"font"			"cbhud30"
-			"textAlignment"	"Center"
-			
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"NoBorder"
-			
-			"defaultFgColor_override" 	"255 255 255 255"
-			"armedFgColor_override" 	"255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"defaultBgColor_override" 	"255 63 0 255"
-			"armedBgColor_override" 	"255 63 0 255"
-			"depressedBgColor_override" "255 63 0 255"			
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-
-			"SubImage"
+      "1"
+      {
+				"name"		"Surface-Medium"
+        "tall"      "13"
+        "antialias" "1"
+				"yres"	"480 700"
+			}
+      "2"
+      {
+				"name"		"Surface-Medium"
+        "tall"      "16"
+        "antialias" "1"
+				"yres"	"701 899"
+			}
+      "3"
+      {
+				"name"		"Surface-Medium"
+        "tall"      "20"
+        "antialias" "1"
+				"yres"	"900 1000"
+			}
+      "4"
+      {
+				"name"		"Surface-Medium"
+        "tall"      "24"
+        "antialias" "1"
+				"yres"	"1001 10000"
+			}
+     }
+		"DefaultVerySmall"
+		{
+			"1"
 			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"6"
-				"ypos"			"6"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
+				"name"		"Verdana"
+				"tall"		"12"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"	"480 599"
+			}
+			"2"
+			{
+				"name"		"Verdana"
+				"tall"		"12"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"	"600 767"
+			}
+			"3"
+			{
+				"name"		"Verdana"
+				"tall"		"12"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"	"768 1023"
+				"antialias"	"1"
+			}
+			"4"
+			{
+				"name"		"Verdana"
+				"tall"		"14"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"	"1024 1199"
+				"antialias"	"1"
+			}
+			"5"
+			{
+				"name"		"Verdana"
+				"tall"		"16"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"	"1200 6000"
+				"antialias"	"1"
 			}
 		}
-	}	
-
-	"MenuButton1" //Server Browser button, only at menu
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"MenuButton1"
-		
-		"xpos"				"7"
-		"ypos"				"7"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		"visible"		"1"
-		"PaintBackgroundType"	"0"
-
-
-		"SubButton"
+		DefaultLarge
 		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"				"50"
-			"tall"				"50"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-
-			"font"			"cbhud30"
-			"textAlignment"	"Center"
-			
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"NoBorder"
-			
-			"defaultFgColor_override" 	"255 255 255 255"
-			"armedFgColor_override" 	"255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"defaultBgColor_override" 	"0 220 255 200"
-			"armedBgColor_override" 	"0 220 255 200"
-			"depressedBgColor_override" "0 220 255 200"			
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-
-			"SubImage"
+			"1"
 			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"6"
-				"ypos"			"6"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
+				"name"		"Verdana"
+				"tall"		"18"
+				"weight"	"900"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"		"480 599"
+			}
+			"2"
+			{
+				"name"		"Verdana"
+				"tall"		"21"
+				"weight"	"900"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"		"600 767"
+			}
+			"3"
+			{
+				"name"		"Verdana"
+				"tall"		"22"
+				"weight"	"900"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"		"768 1023"
+				"antialias"	"1"
+			}
+			"4"
+			{
+				"name"		"Verdana"
+				"tall"		"28"
+				"weight"	"900"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"		"1024 1199"
+				"antialias"	"1"
+			}
+			"5"
+			{
+				"name"		"Verdana"
+				"tall"		"30"
+				"weight"	"900"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"	"1200 6000"
+				"antialias"	"1"
+			}
+			"6"
+			{
+				"name"		"Verdana"
+				"tall"		"20"
+				"range" 		"0x0000 0x00FF"
+				"weight"		"900"
+			}
+			"7"
+			{
+				"name"		"Arial"
+				"tall"		"20"
+				"range" 		"0x0000 0x00FF"
+				"weight"		"800"
 			}
 		}
-	}
-	
-	"MenuButton1Alt" //Continue button, only in-game
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"MenuButton1Alt"
-		
-		"xpos"				"7"
-		"ypos"				"7"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		"visible"		"1"
-		"PaintBackgroundType"	"0"
-
-
-		"SubButton"
+		CenterPrintText
 		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"				"50"
-			"tall"				"50"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-
-			"font"			"cbhud30"
-			"textAlignment"	"Center"
-			
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"NoBorder"
-			
-			"defaultFgColor_override" 	"255 255 255 255"
-			"armedFgColor_override" 	"255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"defaultBgColor_override" 	"0 220 255 200"
-			"armedBgColor_override" 	"0 220 255 200"
-			"depressedBgColor_override" "0 220 255 200"			
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-
-			"SubImage"
+			// note that this scales with the screen resolution
+			"1"
 			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"6"
-				"ypos"			"6"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
+				"name"		"Trebuchet MS" [!$OSX]
+				"name"		"Helvetica" [$OSX]
+				"tall"		"18"
+				"weight"	"900"
+				"antialias" "1"
+				"additive"	"1"
 			}
 		}
-	}	
 
-	"MenuButton2" //quickplay button
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"MenuButton2"
-		
-		"xpos"				"7"
-		"ypos"				"59"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		"visible"		"1"
-		"PaintBackgroundType"	"0"
-
-
-		"SubButton"
+		"PlayerPanelPlayerName"
 		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"				"50"
-			"tall"				"50"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-
-			"font"			"robotoreg24"
-			"textAlignment"	"Center"
-			
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"NoBorder"
-			
-			"defaultFgColor_override" 	"0 0 0 0"
-			"armedFgColor_override" 	"0 0 0 0"
-			"depressedFgColor_override" "0 0 0 0"
-			
-			"defaultBgColor_override" 	"0 220 255 200"
-			"armedBgColor_override" 	"0 220 255 200"
-			"depressedBgColor_override" "0 220 255 200"			
-			
-			"image_drawcolor"	"255 255 255 255"
-			"image_armedcolor"	"255 255 255 255"
-
-			"SubImage"
+			"1"
 			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"13"
-				"ypos"			"13"
-				"zpos"			"1"
-				"wide"			"24"
-				"tall"			"24"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
+				"name"		"Verdana"
+				"tall"		"6"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
 			}
 		}
-	}
-
-	"MenuButton3" //MvM button, only at menu
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"MenuButton3"
-		
-		"xpos"				"7"
-		"ypos"				"111"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		"visible"		"1"
-		"PaintBackgroundType"	"0"
-
-
-		"SubButton"
+		HudHintText
 		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"				"50"
-			"tall"				"50"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-
-			"font"			"robotoreg24"
-			"textAlignment"	"Center"
-			
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"NoBorder"
-			
-			"defaultFgColor_override" 	"255 255 255 255"
-			"armedFgColor_override" 	"255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"defaultBgColor_override" 	"0 220 255 200"
-			"armedBgColor_override" 	"0 220 255 200"
-			"depressedBgColor_override" "0 220 255 200"			
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-
-			"SubImage"
+			"1"
 			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"6"
-				"ypos"			"6"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
+				"name"		"Verdana"
+				"tall"		"12"
+				"weight"	"700"
+				"yres"	"480 599"
+			}
+			"2"
+			{
+				"name"		"Verdana"
+				"tall"		"13"	[$WIN32]
+				"tall"		"23"	[$X360]
+				"weight"	"700"
+				"yres"	"600 767"
+			}
+			"3"
+			{
+				"name"		"Verdana"
+				"tall"		"14"
+				"weight"	"700"
+				"yres"	"768 1023"
+			}
+			"4"
+			{
+				"name"		"Verdana"
+				"tall"		"20"
+				"weight"	"700"
+				"yres"	"1024 1199"
+			}
+			"5"
+			{
+				"name"		"Verdana"
+				"tall"		"24"
+				"weight"	"700"
+				"yres"	"1200 10000"
 			}
 		}
-	}
-	
-	"MenuButton3Alt" //Server Browser button, only in-game
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"MenuButton3Alt"
-		
-		"xpos"				"7"
-		"ypos"				"111"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		"visible"		"1"
-		"PaintBackgroundType"	"0"
-
-
-		"SubButton"
+		"HudFontGiant"
 		{
-			"ControlName"	"CExImageButton"
-			"fieldName"		"SubButton"
-			"xpos"			"0"
-			"ypos"			"0"
-			"wide"				"50"
-			"tall"				"50"
-			"autoResize"	"0"
-			"pinCorner"		"3"
-			"visible"		"1"
-			"enabled"		"1"
-			"tabPosition"	"0"
-
-			"font"			"cbhud30"
-			"textAlignment"	"Center"
-			
-			"dulltext"		"0"
-			"brighttext"	"0"
-			"default"		"1"
-			"sound_depressed"	"UI/buttonclick.wav"
-			"sound_released"	"UI/buttonclickrelease.wav"
-			
-			"border_default"	"NoBorder"
-			"border_armed"		"NoBorder"
-			
-			"defaultFgColor_override" 	"255 255 255 255"
-			"armedFgColor_override" 	"255 255 255 255"
-			"depressedFgColor_override" "255 255 255 255"
-			
-			"defaultBgColor_override" 	"0 220 255 200"
-			"armedBgColor_override" 	"0 220 255 200"
-			"depressedBgColor_override" "0 220 255 200"			
-			
-			"image_drawcolor"	"0 0 0 0"
-			"image_armedcolor"	"0 0 0 0"
-
-			"SubImage"
+			"1"
 			{
-				"ControlName"	"ImagePanel"
-				"fieldName"		"SubImage"
-				"xpos"			"6"
-				"ypos"			"6"
-				"zpos"			"1"
-				"wide"			"14"
-				"tall"			"14"
-				"visible"		"1"
-				"enabled"		"1"
-				"scaleImage"	"1"
+				"name"		"TF2"
+				"tall"		"24"
+				"tall_lodef"	"80"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+				"yres"		"480 599"
+			}
+			"2"
+			{
+				"name"		"TF2"
+				"tall"		"32"
+				"tall_hidef"	"120"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+				"yres"		"600 767"
+			}
+			"3"
+			{
+				"name"		"TF2"
+				"tall"		"44"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+				"yres"		"768 1023"
+			}
+			"4"
+			{
+				"name"		"TF2"
+				"tall"		"48"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+				"yres"		"1024 1199"
+			}
+			"5"
+			{
+				"name"		"TF2"
+				"tall"		"52"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+				"yres"		"1200 10000"
 			}
 		}
-	}	
-	
-	"MenuButton4" // items/loadout button
-	{
-		"controlName"	"CExLabel"
-		"fieldName"	 	"MenuButton4"
-		"visible"			"1"
-		"enabled"			"1"
-	
-		"xpos"				"7"
-		"ypos"				"163"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		
-		"font"				"cbhud30"
-		"labelText"			"Z"
-		
-		"fgcolor_override"		"255 255 255 255"
-		"bgcolor_override"		"0 220 255 200"
-		"textAlignment"		"center"
-	}	
-	
-	"MenuButton5" // options button
-	{
-		"controlName"	"CExLabel"
-		"fieldName"	 	"MenuButton5"
-		"visible"			"1"
-		"enabled"			"1"
-	
-		"xpos"				"7"
-		"ypos"				"215"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		
-		"font"				"cbhud30"
-		"labelText"			"G"
-		
-		"fgcolor_override"		"255 255 255 255"
-		"bgcolor_override"		"0 220 255 200"
-		"textAlignment"		"center"
-	}
-
-	"MenuButton6" //adv. options button
-	{
-		"controlName"	"CExLabel"
-		"fieldName"	 	"MenuButton6"
-		"visible"			"1"
-		"enabled"			"1"
-	
-		"xpos"				"7"
-		"ypos"				"267"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		
-		"font"				"cbhud28" //little bit smaller to compensate for large icon
-		"labelText"			"E"
-		
-		"fgcolor_override"		"255 255 255 255"
-		"bgcolor_override"		"0 220 255 200"
-		"textAlignment"		"center"
-	}
-
-	"MenuButton7" //store button
-	{
-		"controlName"	"CExLabel"
-		"fieldName"	 	"MenuButton7"
-		"visible"			"1"
-		"enabled"			"1"
-	
-		"xpos"				"7"
-		"ypos"				"319"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		
-		"font"				"cbhud30"
-		"labelText"			"f"
-		
-		"fgcolor_override"		"255 255 255 255"
-		"bgcolor_override"		"0 220 255 200"
-		"textAlignment"		"center"
-	}
-
-	"MenuButton8" //replay button
-	{
-		"controlName"	"CExLabel"
-		"fieldName"	 	"MenuButton8"
-		"visible"			"1"
-		"enabled"			"1"
-	
-		"xpos"				"7"
-		"ypos"				"371"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		
-		"font"				"cbhud30"
-		"labelText"			"V"
-		
-		"fgcolor_override"		"255 255 255 255"
-		"bgcolor_override"		"0 220 255 200"
-		"textAlignment"		"center"
-	}
-
-	"MenuButton9" //Workshop button
-	{
-		"controlName"	"CExLabel"
-		"fieldName"	 	"MenuButton9"
-		"visible"			"1"
-		"enabled"			"1"
-	
-		"xpos"				"7"
-		"ypos"				"423"
-		"zpos"				"8"
-		
-		"wide"				"50"
-		"tall"				"50"
-		
-		"font"				"cbhud30"
-		"labelText"			"W"
-		
-		"fgcolor_override"		"255 255 255 255"
-		"bgcolor_override"		"0 220 255 200"
-		"textAlignment"		"center"
-	}	
-	
-	"EventPromo"
-	{
-		"ControlName"	"EditablePanel"
-		"fieldname"		"EventPromo"
-		"xpos"			"c999999"//removed, old value c0
-		"ypos"			"0"
-		"zpos"			"-60"
-		"wide"			"320"
-		"tall"			"f0"
-		"visible"		"1"
-		"PaintBackgroundType"	"0"
-
-			
-		"EventImage"
+		"HudFontGiantBold"
 		{
-			"ControlName"			"ImagePanel"
-			"fieldName"				"EventImage"
-			"xpos"					"cs-0.5"
-			"ypos"					"50"
-			"zpos"					"-1"
-			"wide"					"p0.9"
-			"tall"					"o1"
-			"visible"				"0"
-			"enabled"				"1"
-			"image"					"menu_background_eotl_duck"
-			"scaleImage"			"1"
-			"proportionaltoparent"	"1"
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"44"
+				"tall_lodef"	"52"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+
+		"HudFontBiggerBold"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"35"
+				"tall_lodef"	"40"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+
+		"HudFontBig"
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"36"
+				"tall_hidef"	"48"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"HudFontMediumBig"
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"30"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
 		}	
-
-
-		"Background"
+		"HudFontMediumBigBold"
 		{
-			"ControlName"	"EditablePanel"
-			"fieldname"		"Background"
-			"xpos"			"cs-0.5"
-			"ypos"			"300"
-			"zpos"			"0"
-			"wide"			"p0.8"
-			"tall"			"120"
-			"visible"		"1"
-			"PaintBackgroundType"	"0"
-			"proportionaltoparent"	"1"
-
-			"paintborder"	"1"
-			"border"		"MainMenuBGBorder"
-
-			"OperationTitleLabel"
+			"1"
 			{
-				"ControlName"	"CExLabel"
-				"fieldName"		"OperationTitleLabel"
-				"font"			"HudFontSmallBold"
-				"labelText"		"#MMenu_Update"
-				"textAlignment"	"west"
-				"xpos"			"0"
-				"ypos"			"0"
-				"wide"			"f0"
-				"tall"			"30"
-				"autoResize"	"0"
-				"pinCorner"		"0"
-				"visible"		"1"
-				"enabled"		"1"
-				"textinsetx"	"20"
-				"fgcolor_override"	"235 227 203 255"
+				"name"		"TF2 Build"
+				"tall"		"30"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
 			}
-
-			"ViewDetailsButton"
-			{
-				"ControlName"	"EditablePanel"
-				"fieldname"		"ViewDetailsButton"
-				"xpos"			"p0.02"
-				"ypos"			"27"
-				"zpos"			"11"
-				"wide"			"p0.48"
-				"tall"			"26"
-				"visible"		"1"
-				"PaintBackgroundType"	"0"
-				"proportionaltoparent"	"1"
-
-				"SubButton"
-				{
-					"ControlName"	"CExImageButton"
-					"fieldName"		"SubButton"
-					"xpos"			"cs-0.5"
-					"ypos"			"0"
-					"wide"			"f0"
-					"tall"			"f0"
-					"autoResize"	"0"
-					"pinCorner"		"3"
-					"visible"		"1"
-					"enabled"		"1"
-					"tabPosition"	"0"
-					"use_proportional_insets" "1"
-					"font"			"HudFontSmallBold"
-					"textAlignment"	"center"
-					"dulltext"		"0"
-					"brighttext"	"0"
-					"default"		"1"
-					"sound_depressed"	"UI/buttonclick.wav"
-					"sound_released"	"UI/buttonclickrelease.wav"
-					"labeltext"		"#MMenu_ViewUpdateDetails"
-					"proportionaltoparent"	"1"
-					"command"		"view_update_page"
-					"actionsignallevel"	"4"
-			
-					"border_default"	"MainMenuButtonDefault"
-					"border_armed"		"MainMenuButtonArmed"
-					"paintbackground"	"0"
-			
-					"defaultFgColor_override" "White"
-					"armedFgColor_override" "235 226 202 255"
-					"depressedFgColor_override" "White"
-			
-					"image_drawcolor"	"117 107 94 255"
-					"image_armedcolor"	"235 226 202 255"
-				}
-			}
-			
-			"ViewComicButton"
-			{
-				"ControlName"	"EditablePanel"
-				"fieldname"		"ViewComicButton"
-				"xpos"			"p0.5"
-				"ypos"			"27"
-				"zpos"			"11"
-				"wide"			"p0.48"
-				"tall"			"26"
-				"visible"		"1"
-				"PaintBackgroundType"	"0"
-				"proportionaltoparent"	"1"
-
-				"SubButton"
-				{
-					"ControlName"	"CExImageButton"
-					"fieldName"		"SubButton"
-					"xpos"			"cs-0.5"
-					"ypos"			"0"
-					"wide"			"f0"
-					"tall"			"f0"
-					"autoResize"	"0"
-					"pinCorner"		"3"
-					"visible"		"1"
-					"enabled"		"1"
-					"tabPosition"	"0"
-					"use_proportional_insets" "1"
-					"font"			"HudFontSmallBold"
-					"textAlignment"	"center"
-					"dulltext"		"0"
-					"brighttext"	"0"
-					"default"		"1"
-					"sound_depressed"	"UI/buttonclick.wav"
-					"sound_released"	"UI/buttonclickrelease.wav"
-					"labeltext"		"#MMenu_ViewUpdateComic"
-					"proportionaltoparent"	"1"
-					"command"		"view_update_comic"
-					"actionsignallevel"	"4"
-			
-					"border_default"	"MainMenuButtonDefault"
-					"border_armed"		"MainMenuButtonArmed"
-					"paintbackground"	"0"
-			
-					"defaultFgColor_override" "White"
-					"armedFgColor_override" "235 226 202 255"
-					"depressedFgColor_override" "White"
-			
-					"image_drawcolor"	"117 107 94 255"
-					"image_armedcolor"	"235 226 202 255"
-				}
-			}
-
-			"CyclingAd"
-			{
-				"ControlName"			"CCyclingAdContainerPanel"
-				"fieldName"				"CyclingAd"
-				"xpos"					"5"
-				"ypos"					"p0.47"
-				"zpos"					"100"
-				"wide"					"f10"
-				"tall"					"p0.5"
-				"visible"				"1"
-				"enabled"				"1"
-				"scaleImage"			"1"
-				"proportionaltoparent"	"1"
-
-				"bgcolor_override"		"0 0 0 255"
-
-				"items"
-				{
-					"0"
-					{
-						"item"		"Unused Summer 2015 Operation Pass"
-						
-						"wide"		"f0"
-						"tall"		"f0"
-						"proportionaltoparent"	"1"
-						"show_market"	"0"
-					}
-					"1"
-					{
-						"item"		"Operation Summer 2015 Concealed Killer Case"
-						
-						"wide"		"f0"
-						"tall"		"f0"
-						"proportionaltoparent"	"1"
-					}
-					"2"
-					{
-						"item"		"Operation Summer 2015 Powerhouse Case"
-
-						"wide"		"f0"
-						"tall"		"f0"
-						"proportionaltoparent"	"1"
-					}
-					"3"
-					{
-						"item"		"Summer 2015 Operation Key"
-						
-						"wide"		"f0"
-						"tall"		"f0"
-						"proportionaltoparent"	"1"
-						"show_market"	"0"
-					}
-					"4"
-					{
-						"item"		"Taunt: The Boxtrot"
-						
-						"wide"		"f0"
-						"tall"		"f0"
-						"proportionaltoparent"	"1"
-						"show_market"	"0"
-					}
-					"5"
-					{
-						"item"		"Taunt: The Proletariat Showoff"
-						
-						"wide"		"f0"
-						"tall"		"f0"
-						"proportionaltoparent"	"1"
-						"show_market"	"0"
-					}
-					"6"
-					{
-						"item"		"Taunt: Kazotsky Kick"
-						
-						"wide"		"f0"
-						"tall"		"f0"
-						"proportionaltoparent"	"1"
-						"show_market"	"0"
-					}
-				}
-			}
-
-		} // Background
-
-		"NewImage"
+		}		
+		"HudFontMedium"
 		{
-			"ControlName"			"ImagePanel"
-			"fieldName"				"NewImage"
-			"xpos"					"-60"
-			"ypos"					"-52"
-			"zpos"					"100"
-			"wide"					"80"
-			"tall"					"o1"
-			"visible"				"1"
-			"enabled"				"1"
-			"image"					"new_large"
-			"scaleImage"			"1"
-			"proportionaltoparent"	"1"
-			"mouseinputenabled"		"0"
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"24"
+				"tall_lodef"		"28"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"HudFontMediumSecondary"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"24"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"HudFontMediumBold"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"24"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"HudFontMediumSmallBold"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"18"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"HudFontMediumSmall"
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"18"
+				"tall_hidef"	"24"
+				"tall_lodef"	"18"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"HudFontMediumSmallSecondary"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"18"
+				"tall_hidef"	"24"
+				"tall_lodef"	"20"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"HudFontSmall"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"14"
+				"tall_lodef"	"16"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}	
+		"HudFontSmallishBold"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"16"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"HudFontSmallBold"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"14"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"HudFontSmallBoldShadow"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"20"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+				"dropshadow"	"1"
+			}
+		}
+		"HudFontSmallest"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"11"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}
+		"HudFontSmallestShadow"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"11"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" 	"1"
+				"dropshadow"	"1"
+			}
+		}
+		"HudFontSmallestBold"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"11"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		
+        "SymbolS"		//Main menu icons
+        {
+            "1"
+            {
+                "name"            "Entypo"
+                "tall"        "30"
+                "additive"    "0"
+                "antialias"     "1"
+            }
+        }        
+		"SymbolSLarge"		//Large icon for motd_button
+        {
+            "1"
+            {
+                "name"            "Entypo"
+                "tall"        "50"
+                "additive"    "0"
+                "antialias"     "1"
+            }
+        }
+		
+		"roboto8"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"8"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg8"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"8"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"roboto10"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"10"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg10"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"10"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"roboto11"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"11"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"roboto12"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"12"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg12"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"12"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"roboto14"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"14"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg14"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"14"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"roboto16"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"16"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg16"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"16"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"roboto18"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"18"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg18"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"18"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}		
+		"roboto20"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"20"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg20"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"20"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}		
+		"roboto21"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"21"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg21"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"21"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}		
+		"roboto24"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"24"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg24"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"24"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}		
+		"roboto26"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"26"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg26"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"26"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}		
+		"roboto28"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"28"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg28"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"28"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}		
+		"roboto30"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"30"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg30"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"30"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}		
+		"roboto32"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"32"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg32"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"32"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}		
+		"roboto34"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"34"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg34"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"34"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}		
+		"roboto36"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"36"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg36"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"36"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}		
+		"roboto40"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"40"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"robotoreg40"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"40"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}
+		"roboto48"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"48"
+				"antialias"	"1"
+				"additive"	 "0"
+			}
+		}		
 
-			"pin_to_sibling"		"Background"
-			"pin_corner_to_sibling"	"PIN_BOTTOMLEFT"
-			"pin_to_sibling_corner"	"PIN_TOPRIGHT"	
+		"cbhud10"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"10"
+				"antialias"	"1"
+			}
 		}
 
-	} // EventPromo
-
-	"icon_generator"
-	{
-		"ControlName"		"CEmbeddedItemModelPanel"
-		"fieldName"		"icon_generator"
-
-		"xpos"			"0"
-		"ypos"			"0"
-		"zpos"			"1"		
-		"wide"			"300"
-		"tall"			"300"
-		"autoResize"		"0"
-		"pinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"useparentbg"		"1"
-	
-		"inset_eq_x"	"2"
-		"inset_eq_y"	"2"
-
-		"fov"			"54"
-		"start_framed"		"1"
-
-		"disable_manipulation"	"1"
-
-		"model"
+		"cbhud12"
 		{
-			"angles_x"		"10"
-			"angles_y"		"130"
-			"angles_z"		"0"
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"12"
+				"antialias"	"1"
+			}
+		}
+
+		"cbhud14"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"14"
+				"antialias"	"1"
+			}
+		}
+
+		"cbhud16"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"16"
+				"antialias"	"1"
+			}
+		}
+
+		"cbhud18"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"18"
+				"antialias"	"1"
+			}
+		}
+		"cbhud20"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"20"
+				"antialias"	"1"
+			}
+		}
+		"cbhud21"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"21"
+				"antialias"	"1"
+			}
+		}
+		"cbhud24"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"24"
+				"antialias"	"1"
+			}
+		}
+		"cbhud26"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"26"
+				"antialias"	"1"
+			}
+		}
+		"cbhud28"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"28"
+				"antialias"	"1"
+			}
+		}
+		"cbhud30"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"30"
+				"antialias"	"1"
+			}
+		}
+		"cbhud32"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"32"
+				"antialias"	"1"
+			}
+		}
+		"cbhud34"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"34"
+				"antialias"	"1"
+			}
+		}
+		"cbhud36"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"36"
+				"antialias"	"1"
+			}
+		}
+		"cbhud40"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"40"
+				"antialias"	"1"
+			}
+		}
+
+		"cbhud48"
+		{
+			"1"
+			{
+				"name"		"cbhud"
+				"tall"		"48"
+				"antialias"	"1"
+			}
+		}		
+		
+		"PerformanceModeSmall"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"4"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"StorePromotionsTitle"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"10"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"FontCartPrice"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"16"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"FontStorePrice"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"9"
+				"weight"	"0"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"FontStoreOriginalPrice"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"9"
+				"weight"	"0"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"FontStorePriceSmall"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"6"
+				"weight"	"0"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"FontStorePromotion"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"12"
+				"tall_hidef"	"14"
+				"tall_lodef"	"16"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"TextTooltipFont"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"11"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		GameUIButtons
+		{
+			"1"	//[$X360]
+			{
+				"bitmap"	"1"
+				"name"		"Buttons"
+				"scalex"	"1.0"
+				"scalex_lodef"		"0.75"
+				"scaley"	"1.0"
+				"scaley_lodef"		"0.75"
+			}
+		}
+		GameUIButtonsSmall
+		{
+			"1"	[$X360]
+			{
+				"bitmap"	"1"
+				"name"		"Buttons"
+				"scalex"	"0.5"
+				"scaley"	"0.5"
+			}
+		}
+		GameUIButtonsSmallest
+		{
+			"1"	[$X360]
+			{
+				"bitmap"	"1"
+				"name"		"Buttons"
+				"scalex"	"0.4"
+				"scaley"	"0.4"
+			}
+		}
+		"GameUIButtonText"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"18"
+				"tall_hidef"	"24"
+				"tall_lodef"	"18"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"HudClassHealth"
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"16"
+				"tall_hidef"	"22"
+				"tall_lodef"	"22"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"SpectatorKeyHints"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"8"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ClockSubText"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"9"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ClockSubTextSuddenDeath"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"8"
+				"tall_hidef"	"9"
+				"tall_lodef"	"10"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ClockSubTextTiny"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"8"
+				"tall_hidef"	"7"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"HudSelectionText"
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"15"
+				"weight"	"700"
+				"antialias" 	"1"
+				"yres"		"1 599"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"additive"	"1"
+			}
+			"2"
+			{
+				"name"		"TF2"
+				"tall"		"15"	[$WIN32]
+				"tall"		"21"	[$X360]
+				"weight"	"700"
+				"antialias" 	"1"
+				"yres"		"600 767"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"additive"	"1"
+			}
+			"3"
+			{
+				"name"		"TF2"
+				"tall"		"18"
+				"weight"	"900"
+				"antialias" 	"1"
+				"yres"		"768 1023"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+			}
+			"4"
+			{
+				"name"		"TF2"
+				"tall"		"21"
+				"weight"	"900"
+				"antialias" 	"1"
+				"yres"		"1024 1199"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+			}
+			"5"
+			{
+				"name"		"TF2"
+				"tall"		"24"
+				"weight"	"1000"
+				"antialias" 	"1"
+				"yres"		"1200 10000"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+			}
+		}
+		DebugOverlay
+		{
+			"1"	[$WIN32]
+			{
+				"name"		"Courier New"
+				"tall"		"14"
+				"weight"	"400"
+				"outline"	"1"
+				"range"		"0x0000 0x017F" // Basic Latin, Latin-1 Supplement, Latin Extended-A
+			}
+			"1"	[$X360]
+			{
+				"name"		"Tahoma"
+				"tall"		"18"
+				"weight"	"200"
+				"outline"	"1"
+			}
+		}		
+		TFTypeDeath
+		{
+			"1"
+			{
+				"name"  	"tfd" // tfd.ttf
+				"tall"  	"28"
+				"weight" 	"0"
+				"additive" 	"0"
+				"antialias" 	"1"
+			}
+		}
+		
+		Icons
+		{
+			"1"
+			 {
+				"name"  	"Team Fortress" // tf.ttf
+				"tall"  	"28"
+				"weight" 	"0"
+				"additive" 	"1"
+				"antialias" 	"1"
+			}
+		}
+		"BetaFont"
+		{
+			"1"
+			{
+				"name"		"Courier New"
+				"tall"		"90"
+				"weight"	"900"
+				"range"		"0x0000 0x007F"	//	Basic Latin
+				"antialias" "1"
+				"additive"	"0"
+			}
+		}
+
+		HudNumbers
+		{
+			"1"
+			{
+				"name"  "Team Fortress" // tf.ttf
+				"tall"  "28"
+				"weight" "0"
+				"additive" "1"
+				"antialias" "1"
+			}
+			"2"
+			{
+				"name"  "Verdana"
+				"tall"  "28"
+				"weight" "0"
+				"additive" "1"
+				"antialias" "1"
+			}
+		}
+		"CloseCaption_Normal"
+		{
+			"1"
+			{
+				"name"		"Tahoma"
+				"tall"		"24"
+				"tall_hidef"	"32"
+				"weight"	"500"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+			}
+		}
+		"CloseCaption_Italic"
+		{
+			"1"
+			{
+				"name"		"Tahoma"
+				"tall"		"24"
+				"tall_hidef"	"32"
+				"weight"	"500"
+				"italic"	"1"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+			}
+		}
+		"CloseCaption_Bold"
+		{
+			"1"
+			{
+				"name"		"Tahoma"
+				"tall"		"24"
+				"tall_hidef"	"32"
+				"weight"	"900"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+			}
+		}
+		"CloseCaption_BoldItalic"
+		{
+			"1"
+			{
+				"name"		"Tahoma"
+				"tall"		"24"
+				"tall_hidef"	"32"
+				"weight"	"900"
+				"italic"	"1"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+			}
+		}
+		"CloseCaption_Small"
+		{
+			"1"
+			{
+				"name"		"Tahoma"
+				"tall"		"16"
+				"tall_hidef"	"24"
+				"weight"	"900"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+			}
+		}
+		// this is the symbol font
+		"Marlett"
+		{
+			"1"
+			{
+				"name"		"Marlett"
+				"tall"		"20"
+				"weight"	"0"
+				"symbol"	"1"
+				"range"		"0x0000 0x007F"	//	Basic Latin
+			}
+		}
+		"MarlettSmall"
+		{
+			"1"
+			{
+				"name"		"Marlett"
+				"tall"		"14"
+				"weight"	"0"
+				"symbol"	"1"
+				"range"		"0x0000 0x007F"	//	Basic Latin
+			}
+		}
+		"MenuMainTitle"
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"24"
+				"antialias" "1"
+				"weight"	"500"
+			}
+		}
+		"MenuClassBuckets"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"11"
+				"tall_lodef"	"14"
+				"antialias" "1"
+				"weight"	"500"
+			}
+		}
+		"MenuKeys"
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"12"
+				"antialias" "1"
+				"weight"	"500"
+			}
+		}
+		
+		"GoalText"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"13"
+				"tall_hidef"	"14"
+				"tall_lodef"	"17"
+				"weight"	"800"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}		
+		
+		"ChalkboardTitle"
+		{
+			"1"
+			{
+				"name"			"TF2 Professor"
+				"tall"			"28"
+				"tall_lodef"	"48"
+				"tall_hidef"	"48"
+				"antialias"		"1" 
+				"custom"		"1" [$OSX]
+				"weight"		"500"
+				"weight_lodef"	"800"
+				"weight_hidef"	"1000"
+			}
+		}
+		"ChalkboardTitleBig"
+		{
+			"1"
+			{
+				"name"			"TF2 Professor"
+				"tall"			"40"
+				"tall_lodef"	"48"
+				"tall_hidef"	"48"
+				"antialias"		"1"
+				"custom"		"1" [$OSX]
+				"weight"		"500"
+				"weight_lodef"	"800"
+				"weight_hidef"	"1000"
+			}
+		}
+		"ChalkboardTitleMedium"
+		{
+			"1"
+			{
+				"name"		"TF2 Professor"
+				"tall"		"24"
+				"tall_lodef"	"36"
+				"tall_hidef"	"36"
+				"antialias" "1"
+				"custom"		"1" [$OSX]
+				"weight"	"500"
+			}
+		}
+		"ChalkboardText"
+		{
+			"1"
+			{
+				"name"			"TF2 Professor"
+				"tall"			"14" [!$OSX]
+				"tall"			"15" [$OSX]
+				"tall_lodef"	"32"
+				"tall_hidef"	"32"
+				"antialias"		"1"
+				"custom"		"1" [$OSX]
+				"weight"		"500"
+			}
+		}
+		"ScoreboardVerySmall"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"8"
+				"tall_hidef"	"10"
+				"tall_lodef"	"14"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ScoreboardSmall"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"10"
+				"tall_hidef"	"12"
+				"tall_lodef"	"14"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ScoreboardMediumSmall"
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"14"
+				"weight"	"500"
+				"range"		"0x0000 0x007F"	//	Basic Latin
+				"antialias" "1"
+				"additive"	"0"
+			}
+		}
+		"ScoreboardMedium"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"20"
+				"weight"	"500"
+				"range"		"0x0000 0x007F"	//	Basic Latin
+				"antialias" "1"
+				"additive"	"0"
+			}
+		}
+		"ScoreboardTeamName"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"20"
+				"tall_hidef"	"24"
+				"tall_lodef"	"24"
+				"weight"	"500"
+				"range"		"0x0000 0x007F"	//	Basic Latin
+				"antialias" "1"
+				"additive"	"0"
+			}
+		}
+		"ScoreboardTeamNameLarge"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"34"
+				"tall_hidef"	"38"
+				"tall_lodef"	"38"
+				"weight"	"500"
+				"range"		"0x0000 0x007F"	//	Basic Latin
+				"antialias" "1"
+				"additive"	"0"
+			}
+		}
+
+		"ScoreboardTeamScore"
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"52"
+				"tall_lodef"		"80"
+				"range" 	"0x0000 0x00FF"
+				"weight"	"400"
+				"yres"		"1 599"
+				"antialias" "1"
+			}
+			"2"
+			{
+				"name"		"TF2"
+				"tall"		"72"
+				"tall_hidef"	"120"
+				"range" 	"0x0000 0x00FF"
+				"weight"	"400"
+				"yres"		"600 767"
+				"antialias" "1"
+			}
+			"3"
+			{
+				"name"		"TF2"
+				"tall"		"100"
+				"range" 	"0x0000 0x00FF"
+				"weight"	"400"
+				"yres"		"768 1023"
+				"antialias" "1"
+			}
+			"4"
+			{
+				"name"		"TF2"
+				"tall"		"140"
+				"range" 	"0x0000 0x00FF"
+				"weight"	"400"
+				"yres"		"1024 1199"
+				"antialias" "1"
+			}
+			"5"
+			{
+				"name"		"TF2"
+				"tall"		"180"
+				"range" 	"0x0000 0x00FF"
+				"weight"	"400"
+				"yres"		"1200 10000"
+				"antialias" "1"
+			}
+		}
+		
+		"ControlPointTimer"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"10"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ControlPointTimerSmaller"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"7"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+
+		"Link"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"10"
+				"tall_hidef"	"12"
+				"tall_lodef"	"14"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		
+		"TargetID"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"12"
+				"weight"	"700"
+				"yres"		"480 599"
+				"dropshadow"	"0"
+			}
+			"2"
+			{
+				"name"		"Verdana"
+				"tall"		"13"
+				"weight"	"700"
+				"yres"		"600 767"
+				"dropshadow"	"0"
+			}
+			"3"
+			{
+				"name"		"Verdana"
+				"tall"		"14"
+				"weight"	"700"
+				"yres"		"768 1023"
+				"dropshadow"	"0"
+			}
+			"4"
+			{
+				"name"		"Verdana"
+				"tall"		"20"
+				"weight"	"700"
+				"yres"		"1024 1199"
+				"dropshadow"	"0"
+			}
+			"5"
+			{
+				"name"		"Verdana"
+				"tall"		"24"
+				"weight"	"700"
+				"yres"		"1200 10000"
+				"dropshadow"	"0"
+			}
+		}
+		"ChatFont"
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"12"
+				"weight"	"700"
+				"yres"		"480 599"
+				"dropshadow"	"1"
+			}
+			"2"
+			{
+				"name"		"Verdana"
+				"tall"		"13"
+				"weight"	"700"
+				"yres"		"600 767"
+				"dropshadow"	"1"
+			}
+			"3"
+			{
+				"name"		"Verdana"
+				"tall"		"14"
+				"weight"	"700"
+				"yres"		"768 1023"
+				"dropshadow"	"1"
+			}
+			"4"
+			{
+				"name"		"Verdana"
+				"tall"		"20"
+				"weight"	"700"
+				"yres"		"1024 1199"
+				"dropshadow"	"1"
+			}
+			"5"
+			{
+				"name"		"Verdana"
+				"tall"		"24"
+				"weight"	"700"
+				"yres"		"1200 10000"
+				"dropshadow"	"1"
+			}
+		}
+		"ChatMiniFont"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"10"
+				"weight"	"700"
+				"yres"		"480 599"
+				"dropshadow"	"1"
+			}
+			"2"
+			{
+				"name"		"Verdana"
+				"tall"		"10"
+				"weight"	"700"
+				"yres"		"600 767"
+				"dropshadow"	"1"
+			}
+			"3"
+			{
+				"name"		"Verdana"
+				"tall"		"13"
+				"weight"	"700"
+				"yres"		"768 1023"
+				"dropshadow"	"1"
+			}
+			"4"
+			{
+				"name"		"Verdana"
+				"tall"		"14"
+				"weight"	"700"
+				"yres"		"1024 1199"
+				"dropshadow"	"1"
+			}
+			"5"
+			{
+				"name"		"Verdana"
+				"tall"		"15"
+				"weight"	"700"
+				"yres"		"1200 10000"
+				"dropshadow"	"1"
+			}
+		}
+
+		MenuSmallestFont
+		{
+			"1"
+			{
+				"name"			"Arial Black"
+				"tall"			"8"
+				"tall_lodef"	"12"
+				"range" 		"0x0000 0x00FF"
+				"weight"		"300"
+				"antialias"		"1"
+			}
+		}	
+		
+		MenuSmallFont
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"14"
+				"tall_lodef"	"18"
+				"range" 		"0x0000 0x00FF"
+				"weight"		"300"
+				"weight_lodef"	"600"
+				"antialias"		"1"
+			}
+		}			
+		CapPlayerFont
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"12"
+				"weight"	"500"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"TextColor"	"Black"
+				"antialias" 	"1"
+			}
+		}
+		CapPlayerFontSmall
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"8"
+				"weight"	"500"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"TextColor"	"Black"
+				"antialias" 	"1"
+			}
+		}
+
+		TFFontSmall
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"8"
+				"tall_hidef"	"10"
+				"tall_lodef"	"12"
+				"weight"	"0"
+				"additive"	"1"
+				"antialias" 	"1"
+			}
+		}		
+		TFFontMedium
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"9"
+				"tall_hidef"	"10"
+				"tall_lodef"	"16"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}		
+		
+		InstructionalText
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"11"  [!$OSX]
+				"tall"		"9"  [$OSX]
+				"weight"	"800"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}		
+		
+		MatchmakingDialogTitle
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"36"
+				"tall_lodef"		"28"
+				"weight"	"500"
+			}
+		}
+		MatchmakingDialogSessionOptionsTitle
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"30"
+				"tall_lodef"		"22"
+				"weight"	"500"
+			}
+		}
+		MatchmakingDialogMenuLarge
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"28"
+				"tall_lodef"	"24"
+				"weight"	"500"
+			}
+		}
+		MatchmakingDialogMenuBrowserHostname
+		{
+			"1"			// brower item hostname
+			{
+				"name"		"Trebuchet MS"
+				"tall"		"22"
+				"weight"	"900"
+			}
+		}
+		MatchmakingDialogMenuBrowserDetails
+		{
+			"1"			// browser item players and map name
+			{
+				"name"		"Trebuchet MS"
+				"tall"		"18"
+				"weight"	"900"
+			}
+		}		
+		MatchmakingDialogMenuMedium
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"22"
+				"weight"	"500"
+			}
+		}
+		MatchmakingDialogMenuMediumSmall
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"18"
+				"weight"	"500"
+			}
+		}
+		MatchmakingDialogMenuSmall
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"22"
+				"tall_lodef"		"18"
+				"weight"	"900"
+			}
+		}
+		MatchmakingDialogMenuSmallest
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"18"
+				"tall_lodef"		"18"
+				"weight"	"900"
+			}
+		}
+		RankingDialogHeaders
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"15"
+				"weight"	"900"
+			}
+		}
+		
+		"TeamMenuBold"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"36"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"TeamMenu"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"11"
+				"weight"	"600"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}		
+		"IntroMenuCaption"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"18"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}			
+		"AchievementNotification"
+		{
+			"1"
+			{
+				"name"		"Trebuchet MS"
+				"tall"		"14"
+				"weight"	"900"
+				"antialias" "1"
+			}
+		}
+		"ImportToolSmallestBold"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"10"
+				"weight"	"600"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}
+		"ImportToolSmallest"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"10"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}
+		"SpectatorVerySmall"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"7"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		// Used by scoreboard and spectator UI for names which don't map in the normal fashion
+		"DefaultVerySmallFallBack"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"10"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"		"480 599"
+				"antialias"	"1"
+			}
+			"2"
+			{
+				"name"		"Verdana"
+				"tall"		"12"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"		"600 1199"
+				"antialias"	"1"
+			}
+			"3"
+			{
+				"name"		"Verdana"
+				"tall"		"15"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"		"1200 6000"
+				"antialias"	"1"
+			}
+		}
+		
+		"ItemFontNameSmallest"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"8"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ItemFontNameSmall"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"9"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ItemFontNameLarge"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"12"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ItemFontNameLarger"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"18"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ItemFontAttribSmallest"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"7"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}
+		ItemFontAttribSmallv2
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"8"
+				"antialias" "1"
+				"weight"	"500"
+			}
+		}
+		"ItemFontAttribSmall"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"8"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}
+		"ItemFontAttribLarge"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"11"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}
+		"ItemFontAttribLarger"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"14"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}
+		
+		"AchievementTracker_Name"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"9"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}
+		"AchievementTracker_NameGlow"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"9"
+				"weight"	"500"
+				"blur"		"3"
+				"additive"	"1"
+				"antialias" 	"1"
+				"custom"	"1"
+			}
+		}
+		"AchievementTracker_Desc"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"7"
+				"weight"	"0"
+				"additive"	"1"
+				"antialias" 	"1"
+			}
+		}
+		"QuestObjectiveTracker_Desc"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"7"
+				"weight"	"0"
+				"additive"	"1"
+				"antialias" 	"1"
+			}
+		}
+		"QuestObjectiveTracker_DescGlow"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"7"
+				"weight"	"0"
+				"antialias" 	"1"
+			}
+		}
+		"QuestObjectiveTracker_DescBlur"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"7"
+				"weight"	"0"
+				"blur"		"3"
+				"additive"	"1"
+				"antialias" 	"1"
+				"custom"	"1"
+			}
+		}
+		"ItemTrackerScore_InGame"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"7"
+				"weight"	"0"
+				"antialias" 	"1"
+			}
+		}
+		"QuestFlavorText"
+		{
+			"1"
+			{
+				"name"		"ocra"
+				"tall"		"10"
+				"weight"	"400"
+				"yres"		"480 599"
+				"additive"	"0"
+				"antialias"	"1"
+			}
+			"2"
+			{
+				"name"		"ocra"
+				"tall"		"14"
+				"weight"	"400"
+				"additive"	"0"
+				"yres"		"600 1023"
+				"antialias"	"1"
+			}
+			"3"
+			{
+				"name"		"ocra"
+				"tall"		"18"
+				"weight"	"400"
+				"additive"	"0"
+				"yres"		"1024 6000"
+				"antialias"	"1"
+			}
+		}
+
+		"QuestObjectiveText"
+		{
+			"1"
+			{
+				"name"		"ocra"
+				"tall"		"10"
+				"weight"	"800"
+				"yres"		"480 599"
+				"additive"	"0"
+				"antialias"	"1"
+			}
+			"2"
+			{
+				"name"		"ocra"
+				"tall"		"14"
+				"weight"	"800"
+				"additive"	"0"
+				"yres"		"600 1023"
+				"antialias"	"1"
+			}
+			"3"
+			{
+				"name"		"ocra"
+				"tall"		"18"
+				"weight"	"800"
+				"additive"	"0"
+				"yres"		"1024 6000"
+				"antialias"	"1"
+			}
+		}
+		
+		"QuestLargeText"
+		{
+			"1"
+			{
+				"name"		"ocra"
+				"tall"		"16"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+
+		"QuestStickyText"
+		{
+			"1"
+			{
+				"name"		"TF2 Professor"
+				"tall"		"20"
+				"antialias" "1"
+				"custom"		"1" [$OSX]
+				"weight"	"500"
+			}
+		}
+
+		"AdFont_ItemName"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"10"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		
+		"AdFont_AdText"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"8"
+				"weight"	"400"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"AdFont_PurchaseButton"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"8"
+				"weight"	"0"
+				"antialias" 	"1"
+			}
+		}
+		
+		"TradeUp_Text"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"8"
+				"weight"	"400"
+				"antialias" "1"
+				"additive"	"0"
+			}
+		}
+		
+		"TradeUp_Quote"
+		{
+			"1"
+			{
+				"name"		"Trebuchet MS"
+				"tall"		"9"
+				"weight"	"400"
+				"antialias" "1"
+				"additive"	"0"
+				"italic"	"1"
+			}
+		}
+		
+		//
+		//////////////////// REPLAY FONTS //////////////////////////////
+		//
+		"ReplayVerySmall"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"12"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"	"480 599"
+			}
+			"2"
+			{
+				"name"		"Verdana"
+				"tall"		"12"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"	"600 767"
+			}
+			"3"
+			{
+				"name"		"Verdana"
+				"tall"		"12"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"	"768 1023"
+				"antialias"	"1"
+			}
+			"4"
+			{
+				"name"		"Verdana"
+				"tall"		"14"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"	"1024 1199"
+				"antialias"	"1"
+			}
+			"5"
+			{
+				"name"		"Verdana"
+				"tall"		"16"
+				"weight"	"0"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"yres"	"1200 6000"
+				"antialias"	"1"
+			}
+		}
+		"ReplayBrowserSmallest"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"11"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" 	"1"
+			}
+		}
+		"ReplaySmaller"
+		{
+			"1"
+			{
+				"name"		"Verdana"
+				"tall"		"12"
+				"weight"	"0"
+				"range"		"0x0000 0x017F"
+				"yres"	"480 599"
+			}
+			"2"
+			{
+				"name"		"Verdana"
+				"tall"		"13"
+				"weight"	"0"
+				"range"		"0x0000 0x017F"
+				"yres"	"600 767"
+			}
+			"3"
+			{
+				"name"		"Verdana"
+				"tall"		"14"
+				"weight"	"0"
+				"range"		"0x0000 0x017F"
+				"yres"	"768 1023"
+				"antialias"	"1"
+			}
+			"4"
+			{
+				"name"		"Verdana"
+				"tall"		"20"
+				"weight"	"0"
+				"range"		"0x0000 0x017F"
+				"yres"	"1024 1199"
+				"antialias"	"1"
+			}
+			"5"
+			{
+				"name"		"Verdana"
+				"tall"		"22"
+				"weight"	"0"
+				"range"		"0x0000 0x017F"
+				"yres"	"1200 6000"
+				"antialias"	"1"
+			}
+			"6"
+			{
+				"name"		"Arial"
+				"tall"		"12"
+				"range" 		"0x0000 0x00FF"
+				"weight"		"0"
+			}
+		}
+		"ReplayMediumSmall"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"11"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ReplayMedium"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"14"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ReplayMediumBig"
+		{
+			"1"
+			{
+				"name"		"TF2"
+				"tall"		"18"
+				"tall_hidef"	"24"
+				"tall_lodef"	"18"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ReplayBrowserTab"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"24"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"ReplayLarger"
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"18"
+				"tall_hidef"	"24"
+				"tall_lodef"	"20"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		
+		//
+		//////////////////// ECON FONTS //////////////////////////////
+		//
+		                "size:10,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "10"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:11,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "11"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:12,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "12"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:13,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "13"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:14,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "14"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:15,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "15"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:16,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "16"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:17,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "17"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:18,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "18"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:19,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "19"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:20,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "20"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:21,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "21"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:22,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "22"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:23,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "23"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:24,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "24"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:25,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "25"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:26,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "26"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:27,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "26"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:28,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "28"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:29,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "29"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:30,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "30"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:31,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "31"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:32,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "32"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:33,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "33"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:34,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "34"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:35,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "35"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:36,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "36"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:37,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "37"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:38,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "38"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:39,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "39"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:40,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "40"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:41,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "41"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:42,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "42"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:43,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "43"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:44,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "44"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:45,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "45"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:46,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "46"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:47,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "47"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:48,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "48"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:49,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "49"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:50,outline:off"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "50"
+                                "antialias" "1"
+                                "additive"      "0"
+                                "outline"       "0"
+                        }
+                }
+                "size:12,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "12"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:13,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "13"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:14,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "14"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:15,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "15"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:16,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "16"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:17,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "17"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:18,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "18"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:19,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "19"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:20,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "20"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:21,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "21"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:22,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "22"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:23,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "23"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:24,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "24"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:25,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "25"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:26,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "26"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:27,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "26"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:28,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "28"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:29,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "29"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:30,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "30"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:31,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "31"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:32,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "32"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:33,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "33"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:34,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "34"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:35,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "35"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:36,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "36"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:37,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "37"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:38,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "38"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:39,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "39"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:40,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "40"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:41,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "41"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:42,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "42"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:43,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "43"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:44,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "44"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:45,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "45"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:46,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "46"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:47,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "47"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:48,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "48"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:49,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "49"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+                "size:50,outline:on"
+                {
+                        "1"
+                        {
+                                "name"  "KnucklesCrosses"
+                                "tall"  "50"
+                                "antialias" "0"
+                                "additive"      "0"
+                                "outline"       "1"
+                        }
+                }
+	
+		"EconFontSmall"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"14"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+		"EconFontMedium"
+		{
+			"1"
+			{
+				"name"		"TF2 Build"
+				"tall"		"24"
+				"weight"	"500"
+				"additive"	"0"
+				"antialias" "1"
+			}
+		}
+
+		ControllerHintText
+		{
+			"1"
+			{
+				"name"		"TF2 Secondary"
+				"tall"		"15"
+				"weight"	"500"
+				"range"		"0x0000 0x007F"	//	Basic Latin
+				"antialias" "1"
+				"additive"	"0"
+			}
+		}
+
+	}
+
+	//
+	//////////////////// BORDERS //////////////////////////////
+	//
+	// describes all the border types
+	Borders
+	{
+		NoBorder
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "Blank"
+					"offset" "0 0"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "Blank"
+					"offset" "0 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "Blank"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "Blank"
+					"offset" "0 0"
+				}
+			}
+		}
+				CBBorderWhite1
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}
+			}
+		}
+		
+		CBBorderWhite2
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "1 0"
+				}
+				
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 1"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 1"
+				}
+			}
+		}			
+		CBBorderWhite3
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "1 0"
+				}				
+				"3"
+				{
+					"color" "255 255 255 255"
+					"offset" "2 0"
+				}
+				
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "1 0"
+				}				
+				"3"
+				{
+					"color" "255 255 255 255"
+					"offset" "2 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 1"
+				}				
+				"3"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 2"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 1"
+				}				
+				"3"
+				{
+					"color" "255 255 255 255"
+					"offset" "0 2"
+				}
+			}
+		}			
+		
+		CBBorderBlack1
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}
+			}
+		}		
+		
+		CBBorderBlack2
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "1 0"
+				}
+				
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 1"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 1"
+				}
+			}
+		}			
+		CBBorderBlack3
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "1 0"
+				}				
+				"3"
+				{
+					"color" "0 0 0 255"
+					"offset" "2 0"
+				}
+				
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "1 0"
+				}				
+				"3"
+				{
+					"color" "0 0 0 255"
+					"offset" "2 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 1"
+				}				
+				"3"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 2"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 0"
+				}				
+				"2"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 1"
+				}				
+				"3"
+				{
+					"color" "0 0 0 255"
+					"offset" "0 2"
+				}
+			}
+		}	
+		
+		TeamMenuBorder
+		{
+			"inset" "0 0 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "Black"
+					"offset" "0 0"
+				}
+				"2"
+				{
+					"color" "Black"
+					"offset" "0 0"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "Black"
+					"offset" "0 0"
+				}
+				"2"
+				{
+					"color" "Black"
+					"offset" "0 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "Black"
+					"offset" "0 0"
+				}
+				"2"
+				{
+					"color" "Black"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "Black"
+					"offset" "0 0"
+				}
+				"2"
+				{
+					"color" "Black"
+					"offset" "0 0"
+				}
+			}
+		}
+		
+		ScrollBarButtonBorder
+		{
+			"inset" "0 0 0 0"
+			"backgroundtype" "2"
+		}
+
+		ScrollBarButtonDepressedBorder
+		{
+			"inset" "0 0 0 0"
+			"backgroundtype" "2"
+		}
+
+		ButtonBorder
+		{
+			"inset" "0 0 0 0"
+			"backgroundtype" "2"
+		}
+
+		// this is the border used for default buttons (the button that gets pressed when you hit enter)
+		ButtonKeyFocusBorder
+		{
+			"inset" "0 0 0 0"
+			"backgroundtype" "2"
+		}
+
+		ButtonDepressedBorder
+		{
+			"inset" "0 0 0 0"
+			"backgroundtype" "2"
+		}
+
+		ComboBoxBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "TanLight"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "TanLight"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "TanLight"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "TanLight"
+					"offset" "0 0"
+				}
+			}
+		}
+		DarkComboBoxBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "0 0"
+				}
+			}
+		}
+		SalePriceBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "SaleGreen"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "SaleGreen"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "SaleGreen"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "SaleGreen"
+					"offset" "0 0"
+				}
+			}
+		}
+				
+		MainMenuSubButtonBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "TanDarker"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "TanDarker"
+					"offset" "1 0"
+				}
+			}
+		}
+		
+		CrosshatchedBackground
+		{
+			"bordertype"			"image"
+			"backgroundtype"		"2"
+			"image"					"loadout_header"
+			"tiled"					"1"
+		}
+		
+		OutlinedGreyBox
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"loadout_round_rect_selected"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		OutlinedDullGreyBox
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"loadout_round_rect"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		
+		TFThinLineBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"../hud/tournament_panel_brown"
+			//"image"					"../hud/color_panel_browner"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"8"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"8"	
+		}
+		TFFatLineBorderOpaque
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"../hud/color_panel_brown_opaque"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		TFFatLineBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"../hud/color_panel_brown"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		TFFatLineBorderRedBGOpaque
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"../hud/color_panel_red_opaque"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		TFFatLineBorderRedBGOpaque_Store
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"../hud/color_panel_red_opaque"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		TFFatLineBorderRedBG
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"../hud/color_panel_red"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		TFFatLineBorderBlueBG
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"../hud/color_panel_blu"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		ToolTipBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "TanDarker"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "TanDarker"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "TanDarker"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "TanDarker"
+					"offset" "0 0"
+				}
+			}
+		}
+		OptionsCategoryBorder
+		{
+			"inset" "0 0 1 1"
+			
+			// This border is used just to create a horizontal line, so it only has a bottom border
+			
+			Bottom
+			{
+				"1"
+				{
+					"color" "TanLight"
+					"offset" "0 0"
+				}
+			}
+		}
+		
+		GrayDialogBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"loadout_rect"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		
+		StoreFreeTrialBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"loadout_rect_red"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		
+		EconItemBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"loadout_rect"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		Econ.Button.Border.Default
+		{
+			"inset" "0 0 0 0"
+			"backgroundtype" "2"
+		}
+		Econ.Button.Border.Armed
+		{
+			"inset" "0 0 0 0"
+			"backgroundtype" "2"
+		}
+
+		LoadoutItemMouseOverBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"loadout_rect_mouseover"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		LoadoutItemPopupBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"button_holder_central"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"4"	
+		}
+		
+		BackpackItemGrayedOut
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"Black"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		
+		BackpackItemGrayedOut_Selected
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"Black"
+			
+			"image"					"backpack_rect_selected"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		
+		// Standard ------------------------------------------------------------------------------------------------
+		BackpackItemBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"backpack_rect"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		BackpackItemMouseOverBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"backpack_rect_mouseover"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		BackpackItemSelectedBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"backpack_rect_selected"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		BackpackItemGreyedOutBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"Black"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		BackpackItemGreyedOutSelectedBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"Black"
+			
+			"image"					"backpack_rect_selected"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		
+		// Unique ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_Unique
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorUnique"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_Unique
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorUnique"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_Unique
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorUnique_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_Unique
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorUnique_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// Rarity1 ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_1
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity1"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_1
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity1"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_1
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity1_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_1
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity1_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// Rarity2 ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_2
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity2"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_2
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity2"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_2
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity2_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_2
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity2_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// Rarity3 ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_3
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity3"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_3
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity3"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_3
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity3_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_3
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity3_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// Rarity4 ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_4
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity4"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_4
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity4"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_4
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity4_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_4
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorrarity4_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// Haunted ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_Haunted
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorHaunted"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_Haunted
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorHaunted"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_Haunted
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorHaunted_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_Haunted
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorHaunted_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// PaintkitWeapon ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_PaintkitWeapon
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorPaintkitWeapon"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_PaintkitWeapon
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorPaintkitWeapon"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_PaintkitWeapon
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorPaintkitWeapon_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_PaintkitWeapon
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorPaintkitWeaponGreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		
+		// Collector's ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_Collectors
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCollectors"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_Collectors
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCollectors"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_Collectors
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCollectors_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_Collectors
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCollectors_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// Vintage ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_Vintage
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorVintage"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_Vintage
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorVintage"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_Vintage
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorVintage_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_Vintage
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorVintage_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// Community ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_Community
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCommunity"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_Community
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCommunity"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_Community
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCommunity_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_Community
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCommunity_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// Developer ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_Developer
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorDeveloper"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_Developer
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorDeveloper"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_Developer
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorDeveloper_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_Developer
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorDeveloper_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// SelfMade ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_SelfMade
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorSelfMade"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_SelfMade
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorSelfMade"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_SelfMade
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorSelfMade_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_SelfMade
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorSelfMade_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// Customized ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_Customized
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCustomized"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_Customized
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCustomized"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_Customized
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCustomized_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_Customized
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCustomized_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// Strange ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_Strange
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorStrange"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_Strange
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorStrange"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_Strange
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorStrange_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_Strange
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorStrange_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		// Completed ------------------------------------------------------------------------------------------------
+		BackpackItemBorder_Completed
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCompleted"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_Completed
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCompleted"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_Completed
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCompleted_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_Completed
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"QualityColorCompleted_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		// ***************************************************************************
+		// Rarity Default
+		BackpackItemBorder_RarityDefault
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityDefault"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_RarityDefault
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityDefault"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_RarityDefault
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityDefault_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_RarityDefault
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityDefault_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		// ***************************************************
+		BackpackItemBorder_RarityCommon
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityCommon"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_RarityCommon
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityCommon"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_RarityCommon
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityCommon_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_RarityCommon
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityCommon_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		//
+		BackpackItemBorder_RarityUncommon
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityUncommon"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_RarityUncommon
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityUncommon"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_RarityUncommon
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityUncommon_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_RarityUncommon
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityUncommon_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		//**************
+		BackpackItemBorder_RarityRare
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityRare"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_RarityRare
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityRare"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_RarityRare
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityRare_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_RarityRare
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityRare_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		//******************
+		BackpackItemBorder_RarityMythical
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityMythical"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_RarityMythical
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityMythical"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_RarityMythical
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityMythical_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_RarityMythical
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityMythical_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		// ***************************************************
+		BackpackItemBorder_RarityLegendary
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityLegendary"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_RarityLegendary
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityLegendary"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_RarityLegendary
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityLegendary_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_RarityLegendary
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityLegendary_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		//*********************************************
+		BackpackItemBorder_RarityAncient
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityAncient"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemMouseOverBorder_RarityAncient
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityAncient"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutBorder_RarityAncient
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityAncient_GreyedOut"
+			
+			"image"					"backpack_rect_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		BackpackItemGreyedOutSelectedBorder_RarityAncient
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			"color"					"ItemRarityAncient_GreyedOut"
+			
+			"image"					"backpack_rect_mouseover_color"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+
+		StoreItemBorder
+		{
+			"inset" "0 0 1 1"
+			"backgroundtype"		"2"
+			Left
+			{
+				"1"
+				{
+					"color" "TanDarker"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "TanDarker"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "TanDarker"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "TanDarker"
+					"offset" "0 0"
+				}
+			}
+		}
+		StoreItemBorderMouseOver
+		{
+			"inset" "0 0 1 1"
+			"backgroundtype"		"2"
+			Left
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "0 0"
+				}
+			}
+		}
+		StoreItemBorderSelected
+		{
+			"inset" "0 0 1 1"
+			"backgroundtype"		"2"
+			Left
+			{
+				"1"
+				{
+					"color" "TanLight"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "TanLight"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "TanLight"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "TanLight"
+					"offset" "0 0"
+				}
+			}
+		}
+		
+		NotificationDefault
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"alert_rect"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"4"	
+		}
+		MainMenuButtonDepressed
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"button_central_depressed"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"4"	
+		}
+		MainMenuButtonDepressedArmed
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"button_central_depressed_armed"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"4"	
+		}
+		MainMenuButtonDefault
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"button_central"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"4"	
+		}
+		MainMenuButtonArmed
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"button_central_hover"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"4"	
+		}
+		MainMenuButtonDisabled
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"button_central_disabled"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"4"	
+		}
+		MainMenuMiniButtonDefault
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"button_central_adv"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"1"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"1"	
+		}
+		MainMenuMiniButtonArmed
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"button_central_adv_hover"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"1"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"1"	
+		}
+		MainMenuBGBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"button_holder_central"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"4"	
+		}
+		MainMenuBGBorderAlpha
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"button_holder_central_alpha"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"4"	
+		}
+		MainMenuBlogTabBG
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"blog_tabby"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"8"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"8"	
+		}
+		MainMenuHighlightBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"callout_bubble"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"8"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"8"	
+		}
+
+		TrainingResultsBG
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"button_holder_central"
+			"src_corner_height"		"32"			// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"4"	
+		}
+		
+		StoreInnerShadowBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"store/innershadow_border"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"8"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"8"	
+		}
+		
+		StoreNewBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"new_corner"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"4"	
+		}
+		
+		StoreDiscountBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"sale_corner"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"4"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"4"	
+		}
+
+		StorePreviewBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"store/store_inspector_bg_small"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"8"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"8"	
+		}
+		StoreAddToCart
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"store/store_add_to_cart"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"8"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"8"	
+		}
+		StorePreviewTabSelected
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"store/store_tab_selected"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"12"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"12"	
+		}
+		StorePreviewTabUnselected
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"store/store_tab_unselected"
+			"src_corner_height"		"32"				// pixels inside the image
+			"src_corner_width"		"32"
+			"draw_corner_width"		"16"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"12"	
+		}
+		StorePromotion
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"store/store_coupon_border"
+			"src_corner_height"		"16"				// pixels inside the image
+			"src_corner_width"		"16"
+			"draw_corner_width"		"8"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"8"	
+		}
+		
+		ArmoryScrollbarBox
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"scroll_button_off"
+			"src_corner_height"		"16"				// pixels inside the image
+			"src_corner_width"		"16"
+			"draw_corner_width"		"8"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"8"	
+		}
+		ArmoryScrollbarWell
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"scroll_well"
+			"src_corner_height"		"16"				// pixels inside the image
+			"src_corner_width"		"16"
+			"draw_corner_width"		"8"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"8"	
+		}
+		QuickplayBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		SteamWorkshopBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "TanDark"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		ReplayFatLineBorderRedBGOpaque
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"replay/fatlineborder_red"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		ReplayFatLineBorderOpaque
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"replay/fatlineborder"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"5"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"5"	
+		}
+		ReplayGrayDialogBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"replay/graydialogborder"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		ReplayOutlinedGreyBox
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"replay/outlinedgreybox"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		ReplayOutlinedDullGreyBox
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"replay/dullgreybox"
+			"src_corner_height"		"24"				// pixels inside the image
+			"src_corner_width"		"24"
+			"draw_corner_width"		"11"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"11"	
+		}
+		ReplayThinLineBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"../hud/tournament_panel_brown"
+			//"image"					"../hud/color_panel_browner"
+			"src_corner_height"		"23"				// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"8"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"8"	
+		}
+		ReplayDefaultBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"replay/panel_scalable_default"
+			"src_corner_height"		"23"			// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"7"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"7"	
+		}
+		ReplayHighlightBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"replay/panel_scalable_highlight"
+			"src_corner_height"		"23"			// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"7"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"7"	
+		}
+		ReplayBalloonBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"replay/panel_scalable_balloon"
+			"src_corner_height"		"23"			// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"7"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"7"	
+		}
+		ReplayBrowser.ScrollBar.SliderButton.Border
+		{
+		}
+
+		QuestStatusBorder
+		{
+			"bordertype"			"scalable_image"
+			"backgroundtype"		"2"
+			
+			"image"					"replay/panel_scalable_transparent"
+			"src_corner_height"		"23"			// pixels inside the image
+			"src_corner_width"		"23"
+			"draw_corner_width"		"7"				// screen size of the corners ( and sides ), proportional
+			"draw_corner_height" 	"7"	
 		}
 	}
-	
-	"CBhud"
-    {
-        "ControlName"   "CExLabel"
-        "fieldName"     "CBhud"
-        "xpos"          "r210"
-        "ypos"          "0"
-        "wide"          "150"
-        "tall"          "12"
-        "autoResize"    "0"
-        "pinCorner"     "3"
-        "visible"       "1"
-        "enabled"       "1"
-        "tabPosition"   "0"
-        "textinsetx"    "0"
-        "textinsety"    "0"
-        "font"          "Clocksubtext"
-        "textAlignment" "East"
-        "paintbackground"   "0" 
-		"Labeltext"		"m0remaus"
-		"fgcolor"		"0 255 255 255"
-	}	
+
+	//////////////////////// CUSTOM FONT FILES /////////////////////////////
+	//
+	// specifies all the custom (non-system) font files that need to be loaded to service the above described fonts
+	CustomFontFiles
+	{
+		"1" "resource/tf.ttf"
+		"2" "resource/tfd.ttf"
+		"3"
+		{
+			"font" "resource/TF2.ttf"
+			"name" "TF2"
+			"russian"
+			{
+				"range" "0x0000 0xFFFF"
+			}
+			"polish"
+			{
+				"range" "0x0000 0xFFFF"
+			}
+		}
+		"4" 
+		{
+			"font" "resource/TF2Secondary.ttf"
+			"name" "TF2 Secondary"
+			"russian"
+			{
+				"range" "0x0000 0xFFFF"
+			}
+			"polish"
+			{
+				"range" "0x0000 0xFFFF"
+			}
+		}
+		"5" 
+		{
+			"font" "resource/TF2Professor.ttf"
+			"name" "TF2 Professor"
+			"russian"
+			{
+				"range" "0x0000 0x00FF"
+			}
+			"polish"
+			{
+				"range" "0x0000 0x00FF"
+			}
+		}	
+		"6" 
+		{
+			"font" "resource/TF2Build.ttf"
+			"name" "TF2 Build"
+			"russian"
+			{
+				"range" "0x0000 0xFFFF"
+			}
+			"polish"
+			{
+				"range" "0x0000 0xFFFF"
+			}
+			"turkish"
+			{
+				"range" "0x0000 0xFFFF"
+			}
+		}			
+		"7" 
+		{
+			"font" "resource/Surface_Medium.otf"
+			"name" "Surface-Medium"
+		}		
+		"8" 
+		{
+			"font" "resource/COOLVETI.TTF"
+			"name" "Coolvetica"
+		}
+		"9" 
+		{
+			"font" "resource/ASTRO867.TTF"
+			"name" "Astro 867"
+		}			
+		"10" 
+		{
+			"font" "resource/taller_evolution.ttf"
+			"name" "taller evolution"
+		}	
+		"11" 
+		{
+			"font" "resource/Blocks.ttf"
+			"name" "Blocks"
+		}		
+		"12"
+		{
+			"font" "resource/crosshairs.ttf"
+			"name" "broeselhud Crosshairs"
+		}
+		"13" // Fog's xHairs
+		{
+			"font" "resource/fonts/crosshairs.ttf"
+			"name" "Crosshairs"
+		}
+		"14" 
+		{
+			"font" "resource/Garm3nFont.ttf"
+			"name" "Garm3nFont"
+		}
+		"15"
+		{
+         "font"     "resource/tf2cross.ttf"
+         "name"     "tf2cross"
+		}
+		"16" 
+		{
+			"font" "resource/Surface-Numbers.ttf"
+			"name" "Surface Numbers Medium"
+		}
+		"17"
+		{	
+			"font" "resource/ocra.ttf"
+			"name" "ocra"
+		}
+		"18"
+		{
+			"font" "resource/fonts/KnucklesCrosses.ttf"
+			"name" "KnucklesCrosses"
+		}
+		"19"
+		{
+			"font"     "resource/fonts/cbhud.ttf"
+			"name"     "cbhud"
+		}
+		"20" 
+		{
+			"font" "resource/fonts/symbol.ttf"
+			"name" "symbol"
+		}
+		"21" 
+		{
+			"font" "resource/fonts/RobotoCondensed-Bold.ttf"
+			"name" "Roboto Condensed Bold"
+		}
+		"22" 
+		{
+			"font" "resource/fonts/RobotoCondensed-Regular.ttf"
+			"name" "Roboto Condensed Regular"
+		}
+		    "23"
+        {
+            "font" "resource/fonts/Entypo.otf"
+            "name" "Entypo"
+        }
 }
