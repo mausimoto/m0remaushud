@@ -533,8 +533,8 @@
 			"depressedFgColor_override" "255 255 255 255"
 			
 			"defaultBgColor_override" 	"25 25 25 200"
-			"armedBgColor_override" 	"0 220 255 200"
-			"depressedBgColor_override" "0 220 255 200"			
+			"armedBgColor_override" 	"0 160 255 255"
+			"depressedBgColor_override" "0 160 255 255"			
 			
 			"image_drawcolor"	"0 0 0 0"
 			"image_armedcolor"	"0 0 0 0"
@@ -3995,9 +3995,9 @@
 			"armedFgColor_override" 	"255 255 255 255"
 			"depressedFgColor_override" "255 255 255 255"
 			
-			"defaultBgColor_override" 	"0 220 255 200"
-			"armedBgColor_override" 	"0 220 255 200"
-			"depressedBgColor_override" "0 220 255 200"			
+			"defaultBgColor_override" 	"0 160 255 255"
+			"armedBgColor_override" 	"0 160 255 255"
+			"depressedBgColor_override" "0 160 255 255"			
 			
 			"image_drawcolor"	"0 0 0 0"
 			"image_armedcolor"	"0 0 0 0"
@@ -4063,9 +4063,9 @@
 			"armedFgColor_override" 	"255 255 255 255"
 			"depressedFgColor_override" "255 255 255 255"
 			
-			"defaultBgColor_override" 	"0 220 255 200"
-			"armedBgColor_override" 	"0 220 255 200"
-			"depressedBgColor_override" "0 220 255 200"			
+			"defaultBgColor_override" 	"0 160 255 255"
+			"armedBgColor_override" 	"0 160 255 255"
+			"depressedBgColor_override" "0 160 255 255"			
 			
 			"image_drawcolor"	"0 0 0 0"
 			"image_armedcolor"	"0 0 0 0"
@@ -4131,9 +4131,9 @@
 			"armedFgColor_override" 	"0 0 0 0"
 			"depressedFgColor_override" "0 0 0 0"
 			
-			"defaultBgColor_override" 	"0 220 255 200"
-			"armedBgColor_override" 	"0 220 255 200"
-			"depressedBgColor_override" "0 220 255 200"			
+			"defaultBgColor_override" 	"0 160 255 255"
+			"armedBgColor_override" 	"0 160 255 255"
+			"depressedBgColor_override" "0 160 255 255"			
 			
 			"image_drawcolor"	"255 255 255 255"
 			"image_armedcolor"	"255 255 255 255"
@@ -4199,9 +4199,9 @@
 			"armedFgColor_override" 	"255 255 255 255"
 			"depressedFgColor_override" "255 255 255 255"
 			
-			"defaultBgColor_override" 	"0 220 255 200"
-			"armedBgColor_override" 	"0 220 255 200"
-			"depressedBgColor_override" "0 220 255 200"			
+			"defaultBgColor_override" 	"0 160 255 255"
+			"armedBgColor_override" 	"0 160 255 255"
+			"depressedBgColor_override" "0 160 255 255"			
 			
 			"image_drawcolor"	"0 0 0 0"
 			"image_armedcolor"	"0 0 0 0"
@@ -4267,9 +4267,9 @@
 			"armedFgColor_override" 	"255 255 255 255"
 			"depressedFgColor_override" "255 255 255 255"
 			
-			"defaultBgColor_override" 	"0 220 255 200"
-			"armedBgColor_override" 	"0 220 255 200"
-			"depressedBgColor_override" "0 220 255 200"			
+			"defaultBgColor_override" 	"0 160 255 255"
+			"armedBgColor_override" 	"0 160 255 255"
+			"depressedBgColor_override" "0 160 255 255"			
 			
 			"image_drawcolor"	"0 0 0 0"
 			"image_armedcolor"	"0 0 0 0"
@@ -4308,7 +4308,7 @@
 		"labelText"			"Z"
 		
 		"fgcolor_override"		"255 255 255 255"
-		"bgcolor_override"		"0 220 255 200"
+		"bgcolor_override"		"0 160 255 255"
 		"textAlignment"		"center"
 	}	
 	
@@ -4330,7 +4330,7 @@
 		"labelText"			"G"
 		
 		"fgcolor_override"		"255 255 255 255"
-		"bgcolor_override"		"0 220 255 200"
+		"bgcolor_override"		"0 160 255 255"
 		"textAlignment"		"center"
 	}
 
@@ -4352,7 +4352,7 @@
 		"labelText"			"E"
 		
 		"fgcolor_override"		"255 255 255 255"
-		"bgcolor_override"		"0 220 255 200"
+		"bgcolor_override"		"0 160 255 255"
 		"textAlignment"		"center"
 	}
 
@@ -4374,7 +4374,7 @@
 		"labelText"			"f"
 		
 		"fgcolor_override"		"255 255 255 255"
-		"bgcolor_override"		"0 220 255 200"
+		"bgcolor_override"		"0 160 255 255"
 		"textAlignment"		"center"
 	}
 
@@ -4396,7 +4396,7 @@
 		"labelText"			"V"
 		
 		"fgcolor_override"		"255 255 255 255"
-		"bgcolor_override"		"0 220 255 200"
+		"bgcolor_override"		"0 160 255 255"
 		"textAlignment"		"center"
 	}
 
@@ -4417,7 +4417,7 @@
 		"font"				"cbhud30"
 		"labelText"			"W"
 		"fgcolor_override"		"255 255 255 255"
-		"bgcolor_override"		"0 220 255 200"
+		"bgcolor_override"		"0 160 255 255"
 		"textAlignment"		"center"
 	}	
 	
@@ -4747,7 +4747,7 @@
         "font"          "Clocksubtext"
         "textAlignment" "East"
         "paintbackground"   "0" 
-		"Labeltext"		"m0remaus"
-		"fgcolor"		"0 255 255 255"
+		"Labeltext"		""
+		"fgcolor"		"0 160 255 255"
 	}	
 }
