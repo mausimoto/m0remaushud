@@ -11,6 +11,6 @@ A clean, minimal competitive hud with a bright color scheme.
 
 This hud is edited from the base m0rehud.
 
-Screenshots: http://imgur.com/a/BTs7Z
+Screenshots: http://imgur.com/a/BTs7Z (outdated screenshots)
 
 
